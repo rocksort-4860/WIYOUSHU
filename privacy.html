@@ -44,44 +44,44 @@ footer a{color:var(--sub);text‑decoration:none;} footer .copy{margin‑left:au
   </nav>
   <h1 class="en">Privacy Policy</h1>
   <h1 class="zh">隐私政策</h1>
-  <p class="updated en">Last updated: October 30, 2026</p>
-  <p class="updated zh">最后更新：2026 年 10 月 30 日</p>
+  <p class="updated en">Last updated: November 7, 2026</p>
+  <p class="updated zh">最后更新：2026 年 11 月 7 日</p>
   <div class="banner">
     <h2 class="en">In short: your decision records stay on your device</h2>
     <h2 class="zh">一句话总结：你的决策记录保存在你自己设备上</h2>
-    <p class="en">Decision Journal is local‑first decision‑logging tool. All decision‑related entries are stored on‑device. No account required. RevenueCat processes in‑app purchase with limited anonymous purchase‑related information.</p>
-    <p class="zh">我有数是本地优先决策记录工具，全部决策条目保存在本机，无需注册账号。RevenueCat处理内购，仅接收有限匿名购买相关信息。</p>
+    <p class="en">Decision Journal is a local-first decision journal. All decision entries are stored on your device. No account required. In-app purchases are handled by Apple StoreKit on your device; the developer never receives or stores your payment information. No third-party SDKs, no analytics, no crash reporting, and no network requests.</p>
+    <p class="zh">我有数是本地优先的决策记录工具，全部决策条目保存在本机，无需注册账号。内购由 Apple StoreKit 在设备上完成，开发者不接触也不存储支付信息。不接入任何第三方 SDK，不做统计与崩溃上报，不发起网络请求。</p>
   </div>
   <h2>1. What we collect &mdash; and what we do not</h2>
   <ul>
-    <li><strong>Your content stays local.</strong> Decision entries, notes, confidence values, review outcomes, statistics are stored only inside App local sandbox. We run no server for user content and cannot read your decision data.</li>
+    <li><strong>Your content stays local.</strong> Decision entries, notes and related records are stored only inside the app's local sandbox. We run no server for user content and cannot read your decision data.</li>
     <li><strong>No account required.</strong> We never collect your real‑name, email, phone number, contacts, location, health‑data.</li>
-    <li><strong>Reminders & notifications are local.</strong> Scheduled reminders are managed inside iOS locally; we maintain no push server.</li>
-    <li><strong>No ads & no analytics SDK.</strong> App contains zero third‑party advertising or general analytics libraries. Optional crash‑report is off‑by‑default, you manually enable it.</li>
+    <li><strong>No push notifications or remote services.</strong> The app does not contact any server.</li>
+    <li><strong>No ads, analytics or crash reporting.</strong> The app contains zero third-party advertising, analytics or crash-reporting libraries.</li>
   </ul>
   <p>
-    你的内容全部本地保存：决策条目、笔记、信心值、复盘结果、统计数据仅保存在应用沙盒，我们没有存储用户内容的服务器，无法读取你的决策数据；
+    你的内容全部本地保存：决策条目、笔记及相关记录仅保存在应用沙盒，我们没有存储用户内容的服务器，无法读取你的决策数据；
     无账号系统：不收集姓名、邮箱、手机号、通讯录、位置、健康数据；
-    提醒通知完全本地调度，无第三方推送服务器；
-    无广告SDK、无通用统计SDK；崩溃上报默认关闭，需要用户手动开启。
+    无推送通知与远程服务，应用不向任何服务器发起请求；
+    无广告 SDK、无通用统计 SDK、无崩溃上报。
   </p>
-  <h2>2. Optional iCloud‑Drive Backup</h2>
-  <p>If you enable iCloud‑Drive backup in App settings, App writes timestamped backup file into <strong>your own iCloud‑Drive</strong>. Every backup creates separate new file. Data transfer happens directly between your device and Apple iCloud under your Apple‑ID. We cannot access these backup files.</p>
-  <p>如果你在设置开启iCloud云盘备份，应用会生成带时间戳备份文件写入<strong>属于你自己的iCloud云盘</strong>，每次备份生成独立新文件；传输发生在你的设备与Apple服务器之间，开发者无法访问备份。</p>
+  <h2>2. Backup Export (local only)</h2>
+  <p>The app lets you export your data as a text backup. The backup is generated on your device and saved wherever you choose (for example the Files app or another app you select). The developer never receives a copy; you are responsible for keeping it safe.</p>
+  <p>应用支持把数据导出为文本备份。备份在你的设备上生成，并由你自行选择保存位置（例如「文件」App 或你指定的其它 App）。开发者不会收到副本，请自行妥善保管。</p>
 
-  <h2>3. Third‑party Service: RevenueCat</h2>
-  <p>We use <strong>RevenueCat</strong> for purchase entitlement validation. RevenueCat receives anonymous App‑User‑ID (non‑personally‑identifiable), purchase‑product‑id, purchase‑timestamp, entitlement‑status, basic device context (OS version, app‑version, locale). Data is strictly used for unlock features, restore purchase and anti‑fraud check only.</p>
-  <p>我们使用RevenueCat校验购买权益；RevenueCat获取匿名用户标识（不可定位真实自然人）、购买产品ID、购买时间、权益状态、基础设备上下文；仅用于解锁功能、恢复购买、反作弊。</p>
+  <h2>3. In-App Purchases</h2>
+  <p>In-app purchases are processed by <strong>Apple StoreKit</strong> on your device. Apple handles the payment; the developer never receives or stores your payment details. The app only reads the purchase status locally to unlock Pro features. No third-party purchase SDK is used.</p>
+  <p>内购由 <strong>Apple StoreKit</strong> 在设备上完成，支付由 Apple 处理，开发者不接触也不存储任何支付信息；应用仅在本地读取购买状态以解锁 Pro 功能，不接入任何第三方内购 SDK。</p>
 
   <h2>4. Data Retention & Deletion</h2>
   <ul>
     <li><strong>Local content:</strong> You can delete single entry anytime inside App. Uninstall App will erase all local data permanently; we cannot recover for you.</li>
-    <li><strong>Delete all data:</strong> Settings → Data Security → "Delete all data". This erases all local decision records, cancels pending reminders, deletes App‑generated backup files both in local sandbox and your iCloud‑Drive. App resets empty. Your language, theme and purchased entitlement are preserved, this operation cannot undo.</li>
-    <li><strong>iCloud‑Drive backups:</strong> You can manually delete backup files inside iOS "Files" App, or trigger full‑delete inside App settings.</li>
+    <li><strong>Delete all data:</strong> Settings → Data Security → "Delete all data". This erases all local decision records and resets the app. Your language, theme and purchased entitlement are preserved; this operation cannot be undone.</li>
+    <li><strong>Exported backups:</strong> You can delete exported backup files wherever you saved them; the app does not keep a copy.</li>
   </ul>
   <p>本地内容：可以单条删除；卸载App会永久清除全部本地数据，开发者无法恢复。</p>
-  <p>删除全部数据：设置‑数据安全‑删除全部数据，清除本机全部决策记录、取消待执行提醒、删除本地与iCloud云盘内由本App生成备份，重置应用；保留语言、主题、已购权益；操作不可撤销。</p>
-  <p>iCloud备份可以在iOS文件App手动删除，或使用应用内一键删除全部数据。</p>
+  <p>删除全部数据：设置-数据安全-删除全部数据，清除本机全部决策记录并重置应用；保留语言、主题、已购权益；操作不可撤销。</p>
+  <p>导出的备份可以在你保存的位置自行删除；应用不保留副本。</p>
 
   <h2>5. Contact</h2>
   <p>Questions about this policy: <a href="mailto:onesolve@foxmail.com">onesolve@foxmail.com</a></p>
