@@ -1,121 +1,184 @@
-<!DOCTYPE html>
-<html lang="en" data‑lang="en">
+<!doctype html>
+<html lang="en" data-lang="en">
 <head>
-<meta charset="UTF‑8">
-<meta name="viewport" content="width=device‑width, initial‑scale=1.0, viewport‑fit=cover">
-<title>Privacy Policy · Cogvra（我有数）</title>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2300A898' /><g stroke='%23FFFFFF' stroke‑width='6' fill='none' stroke‑linecap='round'><line x1='20' y1='50' x2='42' y2='50' /><line x1='46' y1='42' x2='46' y2='58' /><line x1='52' y1='42' x2='52' y2='58' /><line x1='58' y1='42' x2='58' y2='58' /><circle cx='72' cy='50' r='16'/></g></svg>">
-<style>
-:root{--bg:#FBFAF6;--card:#FFFFFF;--text:#1F1E1B;--sub:#6B7280;--border:#E8E6E0;--accent:#00A898;--soft:#E7F4F2;--accent‑text:#006B5A;}
-@media (prefers‑color‑scheme: dark){:root{--bg:#0F0F0E;--card:#1A1A18;--text:#F2F4F7;--sub:#9BA1AC;--border:#2A2A27;--accent:#3FB79F;--soft:#132220;--accent‑text:#6FD0BD;}}
-html[data‑lang="en"] .zh{display:none !important;} html[data‑lang="zh"] .en{display:none !important;}
-*{box‑sizing:border‑box;} html{-webkit‑text‑size‑adjust:100%;}
-body{margin:0;background:var(--bg);color:var(--text);line‑height:1.7;font‑family:‑apple‑system,BlinkMacSystemFont,"PingFang SC",Roboto,Arial,sans‑serif;-webkit‑font‑smoothing:antialiased;}
-.wrap{max‑width:760px;margin:0 auto;padding:18px 20px calc(56px + env(safe‑area‑inset‑bottom));}
-nav{display:flex;align‑items:center;justify‑content:space‑between;padding‑bottom:14px;border‑bottom:1px solid var(--border);margin‑bottom:20px;}
-.brand{display:flex;align‑items:center;gap:8px;font‑weight:700;font‑size:18px;color:var(--text);text‑decoration:none;}
-.brand svg{width:30px;height:30px;}
-.lang{display:flex;gap:6px;}
-.lang button{font:inherit;font‑size:12.5px;padding:5px 11px;border‑radius:9px;cursor:pointer;background:transparent;color:var(--accent‑text);border:1px solid var(--accent);transition:.18s;}
-html[data‑lang="en"] .lang button[data‑lang="en"],html[data‑lang="zh"] .lang button[data‑lang="zh"]{background:var(--accent);color:#fff;border‑color:var(--accent);}
-h1{font‑size:27px;margin:26px 0 4px;line‑height:1.35;}
-.updated{color:var(--sub);font‑size:13px;margin:0 0 22px;}
-h2{font‑size:18px;margin:30px 0 8px;}
-p{margin:9px 0;font‑size:15px;}
-ul{margin:9px 0;padding‑left:20px;} li{margin:7px 0;font‑size:15px;} a{color:var(--accent‑text);}
-.banner{background:var(--soft);border:1px solid var(--border);border‑left:3px solid var(--accent);border‑radius:12px;padding:16px 18px;margin:4px 0 18px;}
-.banner h2{margin:0 0 6px;font‑size:16px;}
-.banner p{margin:4px 0;}
-footer{margin‑top:44px;padding‑top:18px;border‑top:1px solid var(--border);display:flex;flex‑wrap:wrap;gap:10px 14px;align‑items:center;font‑size:13px;color:var(--sub);}
-footer a{color:var(--sub);text‑decoration:none;} footer .copy{margin‑left:auto;}
-</style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Privacy Policy — Decision Journal</title>
+<meta name="description" content="Decision Journal keeps your entries encrypted on your device. No account, no analytics, no crash reporting, no ads, no tracking. Pro purchases are processed by Apple and verified with RevenueCat." />
+<link rel="stylesheet" href="./assets/site.css" />
+<!--
+  PLACEHOLDERS TO REPLACE BEFORE SUBMISSION
+  1. [Registered business address] — registered/contact address used in the footer of all four pages.
+  2. Confirm the operator line matches the Apple developer account:
+     "OneSolve Studio, operated by Xinhua Zhang (individual developer)".
+  3. Contact email is shared with the other OneSolve apps: onesolve@foxmail.com.
+  Search for "[" in this folder to find every placeholder in one pass.
+-->
 </head>
-<body data‑title‑en="Privacy Policy · Cogvra" data‑title‑zh="隐私政策 · Cogvra（我有数）">
-<div class="wrap">
-  <nav>
-    <a class="brand" href="index.html">
-      <svg viewBox="0 0 100 100"><rect width="100" height="100" rx="20" fill="#00A898" /><g stroke='#F7F7F5' stroke‑width='6' fill='none' stroke‑linecap='round'><line x1='20' y1='50' x2='42' y2='50' /><line x1='46' y1='42' x2='46' y2='58' /><line x1='52' y1='42' x2='52' y2='58' /><line x1='58' y1='42' x2='58' y2='58' /><circle cx='72' cy='50' r='16'/></g></svg>
-      <span>Cogvra</span>
-    </a>
-    <div class="lang">
-      <button type="button" data‑lang="en" aria‑pressed="true">EN</button>
-      <button type="button" data‑lang="zh" aria‑pressed="false">中文</button>
-    </div>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <a class="brand" href="./index.html" aria-label="Decision Journal home">
+    <span class="brand-mark" aria-hidden="true">DJ</span>
+    <span class="brand-name">Decision Journal<span>OneSolve Studio</span></span>
+  </a>
+  <nav class="site-nav" aria-label="Primary">
+    <a href="./index.html">Decision Journal</a>
+    <a href="./privacy.html" aria-current="page">Privacy</a>
+    <a href="./terms.html">Terms</a>
+    <a href="./support.html">Support</a>
   </nav>
-  <h1 class="en">Privacy Policy</h1>
-  <h1 class="zh">隐私政策</h1>
-  <p class="updated en">Last updated: November 7, 2026</p>
-  <p class="updated zh">最后更新：2026 年 11 月 7 日</p>
-  <div class="banner">
-    <h2 class="en">In short: your decision records stay on your device</h2>
-    <h2 class="zh">一句话总结：你的决策记录保存在你自己设备上</h2>
-    <p class="en">Cogvra is a local-first decision journal. All decision entries are stored on your device. No account required. In-app purchases are handled by Apple StoreKit on your device; the developer never receives or stores your payment information. No third-party SDKs, no analytics, no crash reporting, and no network requests.</p>
-    <p class="zh">我有数是本地优先的决策记录工具，全部决策条目保存在本机，无需注册账号。内购由 Apple StoreKit 在设备上完成，开发者不接触也不存储支付信息。不接入任何第三方 SDK，不做统计与崩溃上报，不发起网络请求。</p>
+  <div class="lang-switch" role="group" aria-label="Language">
+    <button type="button" data-lang="en">EN</button>
+    <button type="button" data-lang="zh">中文</button>
   </div>
-  <h2>1. What we collect &mdash; and what we do not</h2>
-  <ul>
-    <li><strong>Your content stays local.</strong> Decision entries, notes and related records are stored only inside the app's local sandbox. We run no server for user content and cannot read your decision data.</li>
-    <li><strong>No account required.</strong> We never collect your real‑name, email, phone number, contacts, location, health‑data.</li>
-    <li><strong>No push notifications or remote services.</strong> The app does not contact any server.</li>
-    <li><strong>No ads, analytics or crash reporting.</strong> The app contains zero third-party advertising, analytics or crash-reporting libraries.</li>
-  </ul>
-  <p>
-    你的内容全部本地保存：决策条目、笔记及相关记录仅保存在应用沙盒，我们没有存储用户内容的服务器，无法读取你的决策数据；
-    无账号系统：不收集姓名、邮箱、手机号、通讯录、位置、健康数据；
-    无推送通知与远程服务，应用不向任何服务器发起请求；
-    无广告 SDK、无通用统计 SDK、无崩溃上报。
-  </p>
-  <h2>2. Backup Export (local only)</h2>
-  <p>The app lets you export your data as a text backup. The backup is generated on your device and saved wherever you choose (for example the Files app or another app you select). The developer never receives a copy; you are responsible for keeping it safe.</p>
-  <p>应用支持把数据导出为文本备份。备份在你的设备上生成，并由你自行选择保存位置（例如「文件」App 或你指定的其它 App）。开发者不会收到副本，请自行妥善保管。</p>
+</header>
 
-  <h2>3. In-App Purchases</h2>
-  <p>In-app purchases are processed by <strong>Apple StoreKit</strong> on your device. Apple handles the payment; the developer never receives or stores your payment details. The app only reads the purchase status locally to unlock Pro features. No third-party purchase SDK is used.</p>
-  <p>内购由 <strong>Apple StoreKit</strong> 在设备上完成，支付由 Apple 处理，开发者不接触也不存储任何支付信息；应用仅在本地读取购买状态以解锁 Pro 功能，不接入任何第三方内购 SDK。</p>
+<main id="main">
+  <section class="hero page-hero" aria-labelledby="hero-title">
+    <p class="eyebrow">Privacy</p>
+    <h1 id="hero-title" class="i18n-en">Privacy Policy</h1>
+    <h1 class="i18n-zh">隐私政策</h1>
+    <p class="lede i18n-en">Decision Journal is built so that your entries never leave your device.</p>
+    <p class="lede i18n-zh">Decision Journal 的设计前提是：你写下的内容永远不离开你的设备。</p>
+    <p class="policy-line i18n-en"><strong>Effective:</strong> 2026-11-06 · <strong>Last updated:</strong> 2026-11-08</p>
+    <p class="policy-line i18n-zh"><strong>生效日期：</strong>2026-11-06 · <strong>最后更新：</strong>2026-11-08</p>
+  </section>
 
-  <h2>4. Data Retention & Deletion</h2>
-  <ul>
-    <li><strong>Local content:</strong> You can delete single entry anytime inside App. Uninstall App will erase all local data permanently; we cannot recover for you.</li>
-    <li><strong>Delete all data:</strong> Settings → Data Security → "Delete all data". This erases all local decision records and resets the app. Your language, theme and purchased entitlement are preserved; this operation cannot be undone.</li>
-    <li><strong>Exported backups:</strong> You can delete exported backup files wherever you saved them; the app does not keep a copy.</li>
-  </ul>
-  <p>本地内容：可以单条删除；卸载App会永久清除全部本地数据，开发者无法恢复。</p>
-  <p>删除全部数据：设置-数据安全-删除全部数据，清除本机全部决策记录并重置应用；保留语言、主题、已购权益；操作不可撤销。</p>
-  <p>导出的备份可以在你保存的位置自行删除；应用不保留副本。</p>
+  <section class="section prose" aria-labelledby="p1">
+    <div class="summary">
+      <p class="i18n-en"><strong>The short version:</strong> your journal stays encrypted on your device. There is no account, no server for your entries, no analytics, no crash reporting, no advertising, and no tracking. If you buy Pro, Apple processes the payment and RevenueCat receives an anonymous App User ID and your purchase record solely to verify your entitlement.</p>
+      <p class="i18n-zh"><strong>一句话说明：</strong>你写的内容以加密形式留在你的设备上。没有账号、没有存放内容的服务器、没有统计、没有崩溃上报、没有广告，也不追踪你。如果你购买 Pro，付款由 Apple 处理，RevenueCat 会接收一个匿名 App 用户 ID 与购买记录，仅用于校验你的会员权益。</p>
+    </div>
 
-  <h2>5. Contact</h2>
-  <p>Questions about this policy: <a href="mailto:onesolve@foxmail.com">onesolve@foxmail.com</a></p>
-  <footer>
-    <span style="font‑weight:700;">OneSolve</span>
-    <a href="index.html" class="en">App</a><a href="index.html" class="zh">应用</a>
-    <a href="terms.html" class="en">Terms</a><a href="terms.html" class="zh">条款</a>
-    <a href="support.html" class="en">Support</a><a href="support.html" class="zh">支持</a>
-    <span class="copy en">© 2026 OneSolve</span>
-    <span class="copy zh">© 2026 OneSolve</span>
-  </footer>
-</div>
+    <h2 id="p1" class="i18n-en">1. What we collect</h2>
+    <h2 class="i18n-zh">1. 我们收集什么</h2>
+    <p class="i18n-en"><strong>We do not collect your journal content.</strong> We do not collect, transmit, sell, or share anything you write. The app does not create an account and does not ask for your name, email address, contacts, location, photos, microphone, camera, or health data. The only purchase-related data is described in section 4.</p>
+    <p class="i18n-zh"><strong>我们不收集你写的内容。</strong>我们不收集、不传输、不售卖、不共享你写下的任何内容。App 不创建账号，也不会索取你的姓名、邮箱、通讯录、位置、照片、麦克风、相机或健康数据。唯一涉及购买的数据见第 4 节。</p>
+
+    <h2 class="i18n-en">2. Where your entries are stored</h2>
+    <h2 class="i18n-zh">2. 你的内容存在哪里</h2>
+    <p class="i18n-en">Journals, decision records, notes, and settings are encrypted on your device before they are written to local app storage. The master key is held in the iOS Keychain; the Android internal test build uses Keystore-backed secure storage. The ciphertext stays inside the app's own container.</p>
+    <p class="i18n-zh">日记、决策记录、笔记与设置会先在设备上加密，再写入本地 App 存储。主密钥保存在 iOS Keychain；安卓内测版本使用 Keystore 支持的加密存储。密文只保存在 App 自己的容器内。</p>
+    <p class="i18n-en">We do not operate a server and cannot access, read, decrypt, or recover your entries. The app has no sync feature. If you enable an iOS device backup (including iCloud Backup), that backup is controlled by Apple and your iOS settings, not by us.</p>
+    <p class="i18n-zh">我们不运营服务器，无法访问、读取、解密或恢复你的内容。App 没有同步功能。如果你启用了 iOS 设备备份（包括 iCloud 备份），该备份由 Apple 与你的 iOS 设置控制，不由我们控制。</p>
+    <p class="i18n-en">If you use the in-app export feature, the app produces a plain-text backup and hands it to the iOS share sheet or clipboard at your explicit request. From that point the file is outside the app's protected storage; where it goes is your choice and your responsibility. You can delete those exported files wherever you saved them — the app keeps no copy.</p>
+    <p class="i18n-zh">如果你使用 App 内的导出功能，App 会生成一份明文备份，并在你明确操作后交给 iOS 分享面板或剪贴板。从那一刻起，文件就离开了 App 的受保护存储；它去向何处由你选择，也由你负责。你可以在保存的位置自行删除这些导出文件；App 不保留副本。</p>
+
+    <h2 class="i18n-en">3. Network, analytics, crash reporting and ads</h2>
+    <h2 class="i18n-zh">3. 网络、统计、崩溃上报与广告</h2>
+    <p class="i18n-en">The only network activity comes from purchases and entitlement checks: Apple processes payments and RevenueCat verifies whether your Pro entitlement is active (section 4). The app makes no other network requests. It contains no analytics service, no crash-reporting service, no advertising network, and no attribution SDK. RevenueCat does not receive anything you write in the app. No data is used to track you across apps or websites.</p>
+    <p class="i18n-zh">唯一的网络活动来自购买与权益校验：Apple 处理付款，RevenueCat 校验你的 Pro 权益是否生效（见第 4 节）。除此之外，App 不发任何网络请求。它不包含统计服务、崩溃上报服务、广告网络或归因 SDK。RevenueCat 不会收到你在 App 里写下的任何内容。我们不使用任何数据跨 App 或跨网站追踪你。</p>
+
+    <h2 class="i18n-en">4. Purchases</h2>
+    <h2 class="i18n-zh">4. 内购</h2>
+    <p class="i18n-en">Monthly, yearly, and lifetime purchases are processed by Apple through the App Store. Apple receives the purchase information needed to complete the transaction under <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noreferrer">Apple's Privacy Policy</a>. We never see your payment details. To verify whether your entitlement is active, the app uses RevenueCat (RevenueCat, Inc.), which receives an anonymous App User ID, the purchased product identifiers, and entitlement status under <a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noreferrer">RevenueCat's Privacy Policy</a>. This data is used only to validate your Pro entitlement, is not linked to your journal content, and is not used to track you across other apps or websites. We do not operate a server, and the app does not send your receipt or journal to us.</p>
+    <p class="i18n-zh">月付、年付与买断由 Apple 通过 App Store 处理。Apple 会依据 <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noreferrer">Apple 隐私政策</a>接收完成交易所需的信息。我们永远看不到你的支付信息。为校验会员权益是否生效，App 使用 RevenueCat（RevenueCat, Inc.）；它会依据 <a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noreferrer">RevenueCat 隐私政策</a>接收一个匿名 App 用户 ID、已购商品标识与权益状态。这些数据仅用于校验 Pro 权益，不与你的内容关联，也不用于跨 App 或跨网站追踪你。我们不运营服务器，App 不会把收据或你写的内容发送给我们。</p>
+    <p class="i18n-en">Purchases are linked to your Apple ID, not to a device. You can restore purchases inside the Pro screen on any device signed in with the same Apple ID, and manage or cancel a subscription in iOS Settings → Apple ID → Subscriptions. Deleting the app does not cancel a subscription.</p>
+    <p class="i18n-zh">购买绑定在你的 Apple ID 上，而不是设备上。你可以在任何使用同一 Apple ID 登录的设备上，于 Pro 页面点击「恢复购买」；也可以在 iOS 设置 → Apple ID → 订阅 中管理或取消订阅。仅删除 App 不会取消订阅。</p>
+
+    <h2 class="i18n-en">5. Your choices</h2>
+    <h2 class="i18n-zh">5. 你的选择</h2>
+    <ul class="i18n-en">
+      <li><strong>Purchases:</strong> manage or cancel a subscription in iOS Settings → Apple ID → Subscriptions; restore purchases inside the Pro screen.</li>
+      <li><strong>Export:</strong> Settings → Backup &amp; Restore → Export backup. The file is plain text and readable by anyone who obtains it.</li>
+      <li><strong>Delete an entry:</strong> remove it inside the app at any time.</li>
+      <li><strong>Delete everything:</strong> Settings → Data &amp; Privacy → Delete all data. This erases local entries and app-generated backups. It cannot be undone.</li>
+      <li><strong>Uninstall:</strong> removing the app removes its local storage and encryption key.</li>
+    </ul>
+    <ul class="i18n-zh">
+      <li><strong>购买：</strong>在 iOS 设置 → Apple ID → 订阅 中管理或取消订阅；在 Pro 页面点击「恢复购买」。</li>
+      <li><strong>导出：</strong>设置 → 备份与恢复 → 导出备份。文件是明文，任何取得它的人都能读取。</li>
+      <li><strong>删除单条：</strong>随时在 App 内删除。</li>
+      <li><strong>删除全部：</strong>设置 → 数据与隐私 → 清空全部数据。这会清除本地内容与 App 生成的备份，且不可撤销。</li>
+      <li><strong>卸载：</strong>删除 App 会移除本地存储与加密密钥。</li>
+    </ul>
+
+    <h2 class="i18n-en">6. Data requests</h2>
+    <h2 class="i18n-zh">6. 数据请求</h2>
+    <p class="i18n-en">We hold no journal content and cannot provide, correct, or delete a copy of it — there is nothing on our side to act on. Your device is the only place the content exists. For purchase records, Apple and RevenueCat hold the data described in section 4; you can manage subscriptions through your Apple ID, and contact us if you need help locating the right request route.</p>
+    <p class="i18n-zh">我们不持有任何内容，因此无法提供、更正或删除内容副本——我们这边没有可操作的数据。内容只存在于你的设备上。购买记录方面，Apple 与 RevenueCat 持有第 4 节所述的数据；你可以通过 Apple ID 管理订阅，如需帮助确认该向哪一方申请，可联系我们。</p>
+
+    <h2 class="i18n-en">7. Children</h2>
+    <h2 class="i18n-zh">7. 儿童</h2>
+    <p class="i18n-en">The app is not directed to children under 13. Because no personal information is collected, no parental consent process is required. If a child has entered sensitive information on a shared device, delete the entry or uninstall the app.</p>
+    <p class="i18n-zh">本 App 不面向 13 岁以下儿童。由于不收集任何个人信息，无需家长同意流程。如果儿童在共用设备上写入了敏感信息，删除对应内容或卸载 App 即可。</p>
+
+    <h2 class="i18n-en">8. Changes to this policy</h2>
+    <h2 class="i18n-zh">8. 政策变更</h2>
+    <p class="i18n-en">If this policy changes, we will update the effective date above and, where the change is material, ask you to review it inside the app.</p>
+    <p class="i18n-zh">若本政策发生变更，我们会更新上方生效日期；若变更重大，会在 App 内请你重新查看。</p>
+
+    <h2 class="i18n-en">9. Contact</h2>
+    <h2 class="i18n-zh">9. 联系方式</h2>
+    <p class="i18n-en">OneSolve Studio, operated by Xinhua Zhang (individual developer)<br />[Registered business address]<br />Email: <a href="mailto:onesolve@foxmail.com">onesolve@foxmail.com</a></p>
+    <p class="i18n-zh">OneSolve Studio，由独立开发者 Xinhua Zhang 运营<br />[注册地址]<br />邮箱：<a href="mailto:onesolve@foxmail.com">onesolve@foxmail.com</a></p>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="foot-brand">
+    <a class="brand" href="./index.html">
+      <span class="brand-mark" aria-hidden="true">DJ</span>
+      <span class="brand-name">Decision Journal<span>OneSolve Studio</span></span>
+    </a>
+    <p class="i18n-en">One app, one problem. Local-first iOS apps with no ads, no accounts and no tracking.</p>
+    <p class="i18n-zh">一个 App 解决一个问题。本机优先的 iOS 应用，无广告、无账号、无追踪。</p>
+    <p class="i18n-en">Support: <a href="mailto:onesolve@foxmail.com">onesolve@foxmail.com</a></p>
+    <p class="i18n-zh">支持邮箱：<a href="mailto:onesolve@foxmail.com">onesolve@foxmail.com</a></p>
+  </div>
+  <nav aria-label="Product">
+    <h2 class="foot-title i18n-en">Product</h2>
+    <h2 class="foot-title i18n-zh">产品</h2>
+    <ul>
+      <li><a href="./index.html">Decision Journal</a></li>
+      <li><a href="./privacy.html">Privacy</a></li>
+      <li><a href="./terms.html">Terms</a></li>
+      <li><a href="./support.html">Support</a></li>
+    </ul>
+  </nav>
+  <nav aria-label="Company">
+    <h2 class="foot-title i18n-en">Company</h2>
+    <h2 class="foot-title i18n-zh">公司</h2>
+    <ul>
+      <li><a href="mailto:onesolve@foxmail.com">Contact</a></li>
+      <li><a href="./support.html#contact">Help &amp; FAQ</a></li>
+      <li><a href="./privacy.html">Privacy policy</a></li>
+      <li><a href="./terms.html">Terms of use</a></li>
+    </ul>
+  </nav>
+  <div class="foot-meta">
+    <p class="i18n-en"><strong>Operator:</strong> OneSolve Studio, operated by Xinhua Zhang (individual developer) · [Registered business address]</p>
+    <p class="i18n-zh"><strong>运营主体：</strong>OneSolve Studio，由独立开发者 Xinhua Zhang 运营 · [注册地址]</p>
+    <p class="i18n-en"><strong>Effective:</strong> 2026-11-06 · <strong>Last updated:</strong> 2026-11-08</p>
+    <p class="i18n-zh"><strong>生效日期：</strong>2026-11-06 · <strong>最后更新：</strong>2026-11-08</p>
+    <p class="foot-copy">© 2026 OneSolve Studio. All product names and screenshots are the property of OneSolve Studio.</p>
+  </div>
+</footer>
+
 <script>
 (function () {
-  var KEY = 'onesolve_lang';
+  var KEY = 'dj-lang';
   function setLang(lang) {
-    document.documentElement.setAttribute('data‑lang', lang);
-    document.documentElement.lang = lang === 'zh' ? 'zh‑CN' : 'en';
-    var b = document.body;
-    document.title = lang === 'zh' ? (b.dataset.titleZh || document.title) : (b.dataset.titleEn || document.title);
-    var btns = document.querySelectorAll('.lang button');
-    for (var i = 0; i < btns.length; i++) { btns[i].setAttribute('aria‑pressed', btns[i].dataset.lang === lang ? 'true' : 'false'); }
+    document.documentElement.setAttribute('data-lang', lang);
+    document.documentElement.lang = lang === 'zh' ? 'zh-Hans' : 'en';
     try { localStorage.setItem(KEY, lang); } catch (e) {}
+    var btns = document.querySelectorAll('.lang-switch button');
+    for (var i = 0; i < btns.length; i += 1) {
+      btns[i].setAttribute('aria-pressed', btns[i].getAttribute('data-lang') === lang ? 'true' : 'false');
+    }
   }
-  function init() {
-    var saved = null; try { saved = localStorage.getItem(KEY); } catch (e) {}
-    if (!saved) { saved = ((navigator.language || '').toLowerCase().indexOf('zh') === 0) ? 'zh' : 'en'; }
-    setLang(saved);
-    var btns = document.querySelectorAll('.lang button');
-    for (var i = 0; i < btns.length; i++) { btns[i].addEventListener('click', function () { setLang(this.dataset.lang); }); }
+  var saved = 'en';
+  try { saved = localStorage.getItem(KEY) || 'en'; } catch (e) {}
+  setLang(saved === 'zh' ? 'zh' : 'en');
+  var btns = document.querySelectorAll('.lang-switch button');
+  for (var j = 0; j < btns.length; j += 1) {
+    btns[j].addEventListener('click', function () {
+      setLang(this.getAttribute('data-lang'));
+    });
   }
-  if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', init); } else { init(); }
 })();
 </script>
 </body>
 </html>
-<!-- （注：内容由AI生成） -->

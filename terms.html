@@ -1,206 +1,196 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport‑fit=cover">
-<title>Terms of Service · Cogvra（我有数）</title>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2300A898' /><g stroke='%23FFFFFF' stroke-width='6' fill='none' stroke-linecap='round'><line x1='20' y1='50' x2='42' y2='50' /><line x1='46' y1='42' x2='46' y2='58' /><line x1='52' y1='42' x2='52' y2='58' /><line x1='58' y1='42' x2='58' y2='58' /><circle cx='72' cy='50' r='16'/></g></svg>">
-<style>
-:root{
-  --bg:#FBFAF6; --card:#FFFFFF; --text:#1F1E1B; --sub:#6B7280;
-  --border:#E8E6E0; --accent:#00A898; --soft:#E7F4F2; --accent-text:#006B5A;
-}
-@media (prefers‑color‑scheme: dark){
-  :root{ --bg:#0F0F0E; --card:#1A1A18; --text:#F2F4F7; --sub:#9BA1AC;
-         --border:#2A2A27; --accent:#3FB79F; --soft:#132220; --accent‑text:#6FD0BD; }
-}
-html[data‑lang="en"] .zh{display:none !important;}
-html[data‑lang="zh"] .en{display:none !important;}
-*{box‑sizing:border‑box;}
-html{-webkit‑text‑size‑adjust:100%;}
-body{
-  margin:0; background:var(--bg); color:var(--text); line‑height:1.7;
-  font‑family:‑apple‑system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Hiragino Sans GB","Microsoft YaHei",Roboto,Arial,sans‑serif;
-  -webkit‑font‑smoothing:antialiased;
-}
-.wrap{
-  max‑width:760px; margin:0 auto;
-  padding:18px 20px calc(56px + env(safe‑area‑inset‑bottom));
-  padding‑left:calc(20px + env(safe‑area‑inset‑left));
-  padding‑right:calc(20px + env(safe‑area‑inset‑right));
-}
-nav{display:flex; align‑items:center; flex‑wrap:wrap; gap:12px; padding‑bottom:14px; border‑bottom:1px solid var(--border);}
-.brand{display:flex; align‑items:center; gap:8px; font‑weight:700; font‑size:18px; letter‑spacing:.2px; color:var(--text); text‑decoration:none;}
-.brand svg{width:30px; height:30px; display:block;}
-.lang{display:flex; gap:6px; margin‑left:auto;}
-.lang button{
-  font:inherit; font‑size:12.5px; padding:5px 11px; border‑radius:9px; cursor:pointer;
-  background:transparent; color:var(--accent‑text); border:1px solid var(--accent);
-  transition:background .18s ease, color .18s ease;
-}
-html[data‑lang="en"] .lang button[data‑lang="en"],
-html[data‑lang="zh"] .lang button[data‑lang="zh"]{
-  background:var(--accent); color:#fff; border‑color:var(--accent);
-}
-.links{display:flex; gap:16px; font‑size:13.5px; flex:1 1 100%; margin‑top:12px;}
-.links a{color:var(--accent‑text); text‑decoration:none; padding:2px 0;}
-.links a:hover{text‑decoration:underline;}
-h1{font‑size:27px; margin:26px 0 4px; letter‑spacing:‑.4px; line‑height:1.35;}
-.updated{color:var(--sub); font‑size:13px; margin:0 0 22px;}
-h2{font‑size:18px; margin:30px 0 8px; line‑height:1.45;}
-p{margin:9px 0; font‑size:15px;}
-ul{margin:9px 0; padding‑left:20px;}
-li{margin:7px 0; font‑size:15px;}
-a{color:var(--accent‑text);}
-.banner{background:var(--soft); border:1px solid var(--border); border‑left:3px solid var(--accent); border‑radius:12px; padding:16px 18px; margin:4px 0 18px;}
-.banner h2{margin:0 0 6px; font‑size:16px;}
-.banner p{margin:4px 0;}
-footer{margin‑top:44px; padding‑top:18px; border‑top:1px solid var(--border); display:flex; flex‑wrap:wrap; gap:10px 14px; align‑items:center; font‑size:13px; color:var(--sub);}
-footer a{color:var(--sub); text‑decoration:none;}
-footer .copy{margin‑left:auto;}
-@media (max‑width:640px){
-  h1{font‑size:24px;}
-  h2{font‑size:17px;}
-  body{line‑height:1.75;}
-  footer .copy{margin‑left:0; flex:1 1 100%;}
-}
-</style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Terms of Use — Decision Journal</title>
+<meta name="description" content="Terms for Decision Journal: personal licence, local-only data, purchases processed by Apple and verified with RevenueCat, and the limits of a thinking tool." />
+<link rel="stylesheet" href="./assets/site.css" />
+<!--
+  PLACEHOLDERS TO REPLACE BEFORE SUBMISSION
+  1. [Registered business address] — registered/contact address used in the footer of all four pages.
+  2. Confirm the operator line matches the Apple developer account:
+     "OneSolve Studio, operated by Xinhua Zhang (individual developer)".
+  3. Governing law follows the other OneSolve apps (People's Republic of China); change here and on
+     privacy.html only if the operating entity changes.
+  4. Contact email is shared with the other OneSolve apps: onesolve@foxmail.com.
+  Search for "[" in this folder to find every placeholder in one pass.
+-->
 </head>
-<body data‑title‑en="Terms of Service · Cogvra" data‑title‑zh="使用条款 · Cogvra（我有数）">
-<div class="wrap">
-  <nav>
-    <a class="brand" href="index.html">
-      <svg viewBox="0 0 100 100" aria‑hidden="true">
-        <rect width="100" height="100" rx="20" fill="#00A898" />
-        <g stroke='#F7F7F5' stroke‑width='6' fill='none' stroke‑linecap='round'>
-          <line x1='20' y1='50' x2='42' y2='50' />
-          <line x1='46' y1='42' x2='46' y2='58' />
-          <line x1='52' y1='42' x2='52' y2='58' />
-          <line x1='58' y1='42' x2='58' y2='58' />
-          <circle cx='72' cy='50' r='16'/>
-        </g>
-      </svg>
-      <span>Cogvra</span>
-    </a>
-    <span class="lang">
-      <button type="button" data‑lang="en" aria‑pressed="true">EN</button>
-      <button type="button" data‑lang="zh" aria‑pressed="false">中文</button>
-    </span>
-    <span class="links">
-      <a href="index.html" class="en">App</a><a href="index.html" class="zh">应用</a>
-      <a href="privacy.html" class="en">Privacy</a><a href="privacy.html" class="zh">隐私</a>
-      <a href="terms.html" class="en">Terms</a><a href="terms.html" class="zh">条款</a>
-      <a href="support.html" class="en">Support</a><a href="support.html" class="zh">支持</a>
-    </span>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <a class="brand" href="./index.html" aria-label="Decision Journal home">
+    <span class="brand-mark" aria-hidden="true">DJ</span>
+    <span class="brand-name">Decision Journal<span>OneSolve Studio</span></span>
+  </a>
+  <nav class="site-nav" aria-label="Primary">
+    <a href="./index.html">Decision Journal</a>
+    <a href="./privacy.html">Privacy</a>
+    <a href="./terms.html" aria-current="page">Terms</a>
+    <a href="./support.html">Support</a>
   </nav>
-  <h1 class="en">Terms of Service</h1>
-  <h1 class="zh">使用条款</h1>
-  <p class="updated en">Last updated: October 30, 2026</p>
-  <p class="updated zh">最后更新：2026 年 10 月 30 日</p>
-  <div class="banner">
-    <h2 class="en">In one sentence</h2>
-    <h2 class="zh">一句话总结</h2>
-    <p class="en">Cogvra is a local‑first decision‑recording tool running on your device. Your decision records belong to you. Monthly & yearly subscriptions are auto‑renewable; Lifetime is a one‑time purchase. This tool does NOT provide investment or life advice.</p>
-    <p class="zh">我有数是运行在你设备上本地优先的决策记录工具。你的决策记录归你所有；月付、年付为自动续订订阅；终身买断为一次性付费。本工具不构成投资、生活或专业决策建议。</p>
+  <div class="lang-switch" role="group" aria-label="Language">
+    <button type="button" data-lang="en">EN</button>
+    <button type="button" data-lang="zh">中文</button>
   </div>
-  <h2 class="en">1. Acceptance</h2>
-  <h2 class="zh">1. 接受条款</h2>
-  <p class="en">By downloading or using Cogvra ("the App"), you agree to these Terms. If you do not agree, do not use the App.</p>
-  <p class="zh">下载或使用我有数（以下简称「本应用」）即表示你同意本条款。若你不同意，请不要使用本应用。</p>
-  <h2 class="en">2. Your content</h2>
-  <h2 class="zh">2. 你的内容</h2>
-  <ul>
-    <li class="en">Everything you create in the App —‑‑ decision entries, notes, confidence scores, review outcomes‑‑‑ remains <strong>yours</strong>. We claim no ownership over it.</li>
-    <li class="zh">你在本应用中创建的一切内容——决策条目、笔记、信心分数、复盘结果——都<strong>归你所有</strong>。我们不主张任何所有权。</li>
-    <li class="en">Your content is stored locally on your device. You are responsible for your own backups: export CSV or use optional iCloud‑Drive backup feature.</li>
-    <li class="zh">你的内容存储在本地设备上。备份由你自己负责，可以导出CSV或开启可选iCloud云盘备份。</li>
-    <li class="en">Do not use the App to store unlawful or infringing content. There is no built‑in social sharing; any sharing is done via your device system share‑sheet.</li>
-    <li class="zh">请勿使用本应用存储违法或侵权内容。本应用无内置社交分享；所有分享行为都通过系统分享面板完成。</li>
-  </ul>
-  <h2 class="en">3. License</h2>
-  <h2 class="zh">3. 使用许可</h2>
-  <p class="en">We grant you a personal, non‑exclusive, non‑transferable, revocable license to use the App on Apple devices you own or control, complying with Apple EULA and these Terms.</p>
-  <p class="zh">我们授予你个人、非排他、不可转让、可撤销的许可，允许在你拥有或控制的Apple设备上使用本应用，同时遵守Apple最终用户许可协议与本条款。</p>
-  <h2 class="en">4. Purchase & Restore Purchases</h2>
-  <h2 class="zh">4. 购买与恢复购买</h2>
-  <ul>
-    <li class="en"><strong>Subscriptions (Monthly / Yearly):</strong> Auto‑renewable subscriptions. You must cancel at least 24 hours before the renewal date to avoid being charged. Subscription renews automatically unless auto‑renew is turned‑off in Apple‑ID settings.</li>
-    <li class="zh"><strong>订阅（月付 / 年付）：</strong>自动续订订阅。如需避免扣费，请在续订日前至少24小时取消。如未关闭自动续订，订阅将会自动续费。</li>
-    <li class="en"><strong>Lifetime one‑time purchase:</strong> Single‑payment non‑consumable purchase to unlock all premium‑features forever, no subscription, no recurring charges.</li>
-    <li class="zh"><strong>终身一次性买断：</strong>一次性付费永久解锁全部高级功能，不属于订阅，不产生周期扣费。</li>
-    <li class="en"><strong>Restoring purchase:</strong> Tap "Restore Purchases" inside App under same Apple‑ID to re‑activate your entitlement.</li>
-    <li class="zh"><strong>恢复购买：</strong>使用同一Apple ID，在应用内点击「恢复购买」恢复你的高级权益。</li>
-    <li class="en"><strong>Manage‑subscription:</strong> Go to iOS Settings → Your Apple‑ID → Subscriptions to view, modify or cancel active subscriptions.</li>
-    <li class="zh"><strong>管理订阅：</strong>前往iOS设置 → 你的Apple ID → 订阅，查看、修改、取消正在生效的订阅。</li>
-    <li class="en"><strong>Refunds:</strong> All transactions are handled by Apple. Submit refund request via reportaproblem.apple.com. We cannot issue direct refunds to end‑users.</li>
-    <li class="zh"><strong>退款：</strong>全部交易由Apple处理，请前往 reportaproblem.apple.com 提交退款申请；开发者无法直接为用户退款。</li>
-    <li class="en">Purchase‑entitlement verification is handled on‑device by Apple StoreKit. No third‑party purchase or analytics service is involved.</li>
-    <li class="zh">购买权益校验由 Apple StoreKit 在设备本地完成，不涉及任何第三方购买服务或分析服务。</li>
-  </ul>
-  <h2 class="en">5. Acceptable use</h2>
-  <h2 class="zh">5. 合理使用</h2>
-  <p class="en">You agree not to reverse‑engineer, decompile, circumvent purchase checks, use App to violate laws or interfere with Apple and third‑party service systems.</p>
-  <p class="zh">你同意不会逆向工程、反编译、绕过付费校验，不会利用本应用违反法律，也不会干扰Apple及第三方服务商系统。</p>
-  <h2 class="en">6. Disclaimers</h2>
-  <h2 class="zh">6. 免责声明</h2>
-  <p class="en">The App is provided "as‑is". Local data loss may occur, always keep your own backups. <strong>This tool is only for personal decision‑logging, it does NOT provide investment, financial, legal or psychological advice.</strong> All real‑world choices are your own responsibility.</p>
-  <p class="zh">本应用按现状提供。本地数据存在丢失风险，请自行做好备份。<strong>本工具仅用于个人决策记录，不提供投资、理财、法律、心理专业建议。现实中所有选择风险由你自行承担。</strong></p>
-  <h2 class="en">7. Limitation of liability</h2>
-  <h2 class="zh">7. 责任限制</h2>
-  <p class="en">To maximum extent permitted by law, we are not liable for indirect, incidental or consequential damages, including local‑device data loss. Our total liability shall not exceed amount you paid for App within 12‑month before claim arises.</p>
-  <p class="zh">在法律允许最大范围内，我们不对间接、附带、衍生损害（含设备本地数据丢失）承担责任；全部赔偿上限为索赔前12个月内你为本应用支付的金额。</p>
-  <h2 class="en">8. Termination</h2>
-  <h2 class="zh">8. 终止使用</h2>
-  <p class="en">You may stop and uninstall App anytime. We may revoke license for material breach of terms. Clause 6 and 7 survive termination.</p>
-  <p class="zh">你可以随时停止使用、卸载本应用。对于严重违反条款用户我们可以撤销许可；第6、7条在终止后持续有效。</p>
-  <h2 class="en">9. Governing law</h2>
-  <h2 class="zh">9. 适用法律</h2>
-  <p class="en">These Terms are governed by laws of State of California, USA, without conflict‑of‑law rules. Disputes shall be submitted to courts in California.</p>
-  <p class="zh">本条款受美国加利福尼亚州法律管辖，不考虑法律冲突规则；争议提交加州管辖法院处理。</p>
-  <h2 class="en">10. Changes</h2>
-  <h2 class="zh">10. 条款变更</h2>
-  <p class="en">We may update terms with product iteration. "Last updated" date reflects new version. Continuing using App after update means acceptance of revised terms.</p>
-  <p class="zh">产品迭代时我们可更新条款；页面上方更新日期为新版本标识，继续使用即视为接受修订版本。</p>
-  <h2 class="en">11. Contact</h2>
-  <h2 class="zh">11. 联系方式</h2>
-  <p class="en">Questions about Terms: <a href="mailto:onesolve@foxmail.com">onesolve@foxmail.com</a>.</p>
-  <p class="zh">对条款有疑问，请联系：<a href="mailto:onesolve@foxmail.com">onesolve@foxmail.com</a>。</p>
-  <footer>
-    <span style="font‑weight:700;">OneSolve</span>
-    <a href="index.html" class="en">App</a><a href="index.html" class="zh">应用</a>
-    <a href="privacy.html" class="en">Privacy Policy</a><a href="privacy.html" class="zh">隐私政策</a>
-    <a href="support.html" class="en">Support</a><a href="support.html" class="zh">支持</a>
-    <span class="copy en">© 2026 OneSolve</span>
-    <span class="copy zh">© 2026 OneSolve</span>
-  </footer>
-</div>
+</header>
+
+<main id="main">
+  <section class="hero page-hero" aria-labelledby="hero-title">
+    <p class="eyebrow">Terms</p>
+    <h1 id="hero-title" class="i18n-en">Terms of Use</h1>
+    <h1 class="i18n-zh">用户协议</h1>
+    <p class="lede i18n-en">The rules for using Decision Journal, in plain language.</p>
+    <p class="lede i18n-zh">用平实的语言说明使用 Decision Journal 的规则。</p>
+    <p class="policy-line i18n-en"><strong>Effective:</strong> 2026-11-06 · <strong>Last updated:</strong> 2026-11-08</p>
+    <p class="policy-line i18n-zh"><strong>生效日期：</strong>2026-11-06 · <strong>最后更新：</strong>2026-11-08</p>
+  </section>
+
+  <section class="section prose" aria-labelledby="t1">
+    <div class="summary">
+      <p class="i18n-en">By downloading or using Decision Journal you agree to these Terms and to Apple's Standard End User License Agreement (EULA), available at <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noreferrer">apple.com/legal/internet-services/itunes/dev/stdeula</a>. If these Terms conflict with Apple's EULA, the stricter provision applies to the extent the law allows.</p>
+      <p class="i18n-zh">下载或使用 Decision Journal，即表示你同意本协议，并同意 Apple 标准最终用户许可协议（EULA）：<a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noreferrer">apple.com/legal/internet-services/itunes/dev/stdeula</a>。本协议与 Apple EULA 冲突时，在法律允许范围内适用更严格的规定。</p>
+    </div>
+
+    <h2 id="t1" class="i18n-en">1. What the app is</h2>
+    <h2 class="i18n-zh">1. App 是什么</h2>
+    <p class="i18n-en">Decision Journal is a personal, on-device tool for reflecting on decisions. It provides thinking models, explanatory patterns, example principles, and historical cases for educational purposes. It is not a decision-making service and does not make decisions for you.</p>
+    <p class="i18n-zh">Decision Journal 是一个只在本机运行的个人决策反思工具，提供思维模型、解释性规律、示例准则与历史案例，仅供学习参考。它不是决策服务，也不会替你做决定。</p>
+
+    <h2 class="i18n-en">2. Not professional advice</h2>
+    <h2 class="i18n-zh">2. 不构成专业建议</h2>
+    <p class="i18n-en">The app does not provide decision advice, medical, psychological, legal, financial, investment, or any other professional advice. Content and prompts are general information, not a recommendation for your situation. Always consult a qualified professional before making a decision with legal, financial, health, or safety consequences. You are solely responsible for your decisions.</p>
+    <p class="i18n-zh">本 App 不提供决策建议，也不提供医疗、心理、法律、财务、投资或其他专业建议。内容与提问均为一般性信息，不针对你的处境给出建议。在做出涉及法律、财务、健康或安全的决定前，请咨询具备资质的专业人士。你的决定由你自己负责。</p>
+
+    <h2 class="i18n-en">3. Licence</h2>
+    <h2 class="i18n-zh">3. 许可</h2>
+    <p class="i18n-en">We grant you a personal, non-transferable, non-exclusive, revocable licence to use the app on Apple devices you own or control, as permitted by the App Store Terms of Service. You may not reverse engineer, decompile, resell, redistribute, or circumvent purchase controls, except where such restrictions are prohibited by law.</p>
+    <p class="i18n-zh">我们授予你一项个人使用、不可转让、非独占、可撤销的许可，允许你在拥有或控制的 Apple 设备上按 App Store 服务条款使用本 App。除法律禁止此类限制外，你不得反向工程、反编译、转售、再分发或绕过购买校验。</p>
+
+    <h2 class="i18n-en">4. Your data and backups</h2>
+    <h2 class="i18n-zh">4. 你的数据与备份</h2>
+    <p class="i18n-en">Your entries are encrypted and stored locally on your device. We do not operate a server and cannot recover, restore, or access your data. You are responsible for creating and safeguarding backups. Exported backups are plain text; anyone who obtains them can read them. Uninstalling the app removes its local vault and encryption key.</p>
+    <p class="i18n-zh">你的内容加密后保存在设备本地。我们不运营服务器，无法找回、恢复或访问你的数据。你需自行创建并保管备份。导出的备份是明文，任何取得该文件的人都能读取。卸载 App 会移除本地加密库与加密密钥。</p>
+
+    <h2 class="i18n-en">5. Purchases and subscriptions</h2>
+    <h2 class="i18n-zh">5. 内购与订阅</h2>
+    <ul class="i18n-en">
+      <li><strong>Monthly and yearly plans</strong> are auto-renewing subscriptions. Payment is charged to your Apple ID account at confirmation of purchase.</li>
+      <li>The subscription renews automatically unless you cancel at least 24 hours before the end of the current period. Your account is charged for renewal within 24 hours before the period ends.</li>
+      <li>Manage or cancel in iOS Settings → your Apple ID → Subscriptions. Deleting the app does not cancel a subscription.</li>
+      <li><strong>Lifetime</strong> is a one-time, non-consumable purchase. It does not renew.</li>
+      <li>This version does not include a free trial for any plan.</li>
+      <li><strong>Restore Purchases</strong> is available inside the app and re-activates your entitlement on a device signed in with the same Apple ID.</li>
+      <li>Payment is processed by Apple. To verify whether your Pro entitlement is active, the app uses RevenueCat, which receives an anonymous App User ID and your purchase record for that purpose only (see the <a href="./privacy.html">Privacy Policy</a>).</li>
+      <li>Prices and plan availability are shown in the App Store and may vary by region. Refunds are handled by Apple under its refund policy; submit a request at <a href="https://reportaproblem.apple.com/" target="_blank" rel="noreferrer">reportaproblem.apple.com</a>.</li>
+    </ul>
+    <ul class="i18n-zh">
+      <li><strong>月付与年付</strong>为自动续期订阅。确认购买时，费用从你的 Apple ID 账户扣除。</li>
+      <li>除非你在当前周期结束前至少 24 小时取消，订阅会自动续期；账户会在周期结束前 24 小时内扣取续期费用。</li>
+      <li>可在 iOS 设置 → 你的 Apple ID → 订阅 中管理或取消。仅删除 App 不会取消订阅。</li>
+      <li><strong>买断</strong>为一次性非消耗型购买，不续期。</li>
+      <li>当前版本所有方案均不含免费试用。</li>
+      <li>App 内提供<strong>恢复购买</strong>，可在同一 Apple ID 登录的设备上重新激活权益。</li>
+      <li>付款由 Apple 处理。为校验 Pro 权益是否生效，App 使用 RevenueCat；它仅为此目的接收一个匿名 App 用户 ID 与购买记录（见<a href="./privacy.html">隐私政策</a>）。</li>
+      <li>价格与方案以 App Store 显示为准，可能因地区而异。退款由 Apple 按其退款政策处理，可在 <a href="https://reportaproblem.apple.com/" target="_blank" rel="noreferrer">reportaproblem.apple.com</a> 提交申请。</li>
+    </ul>
+
+    <h2 class="i18n-en">6. Acceptable use</h2>
+    <h2 class="i18n-zh">6. 使用规范</h2>
+    <p class="i18n-en">You agree not to use the app to violate any law, infringe the rights of others, or interfere with Apple's systems or the app's operation.</p>
+    <p class="i18n-zh">你同意不使用本 App 从事违法活动、侵害他人权利，或干扰 Apple 系统及本 App 的正常运行。</p>
+
+    <h2 class="i18n-en">7. Availability and changes</h2>
+    <h2 class="i18n-zh">7. 可用性与变更</h2>
+    <p class="i18n-en">We may update, change, or discontinue features. We do not guarantee that the app will always be available or compatible with every future iOS version. If we make material changes to these Terms, we will update the effective date above.</p>
+    <p class="i18n-zh">我们可能更新、调整或停止部分功能。我们不保证 App 始终可用，也不保证兼容未来的所有 iOS 版本。若本协议发生重大变更，我们会更新上方生效日期。</p>
+
+    <h2 class="i18n-en">8. Disclaimer of warranties</h2>
+    <h2 class="i18n-zh">8. 免责条款</h2>
+    <p class="i18n-en">The app is provided "as is" and "as available", without warranties of any kind, express or implied, including merchantability, fitness for a particular purpose, accuracy, and non-infringement. We do not warrant that the content is complete, current, or suitable for your circumstances.</p>
+    <p class="i18n-zh">本 App 按“现状”与“可用”状态提供，不作任何明示或默示担保，包括适销性、特定用途适用性、准确性与不侵权担保。我们不保证内容完整、及时或适合你的具体情况。</p>
+
+    <h2 class="i18n-en">9. Limitation of liability</h2>
+    <h2 class="i18n-zh">9. 责任限制</h2>
+    <p class="i18n-en">To the maximum extent permitted by law, we are not liable for indirect, incidental, special, consequential, or punitive damages, or for lost data, lost profits, or decisions you make. Where liability cannot be excluded, it is limited to the amount you paid for the app in the twelve months before the claim.</p>
+    <p class="i18n-zh">在法律允许的最大范围内，我们不对间接、附带、特殊、后果性或惩罚性损害负责，也不对数据丢失、利润损失或你作出的决定负责。若责任无法排除，则以索赔前十二个月内你为 App 支付的金额为上限。</p>
+
+    <h2 class="i18n-en">10. Governing law</h2>
+    <h2 class="i18n-zh">10. 适用法律</h2>
+    <p class="i18n-en">These Terms are governed by the laws of the People's Republic of China, excluding its conflict-of-law rules. This does not remove mandatory consumer rights you have under the law of your country of residence.</p>
+    <p class="i18n-zh">本协议适用中华人民共和国法律，不考虑冲突法规则。这不排除你依据居住国法律享有的强制消费者权利。</p>
+
+    <h2 class="i18n-en">11. Contact</h2>
+    <h2 class="i18n-zh">11. 联系方式</h2>
+    <p class="i18n-en">OneSolve Studio, operated by Xinhua Zhang (individual developer)<br />[Registered business address]<br />Email: <a href="mailto:onesolve@foxmail.com">onesolve@foxmail.com</a></p>
+    <p class="i18n-zh">OneSolve Studio，由独立开发者 Xinhua Zhang 运营<br />[注册地址]<br />邮箱：<a href="mailto:onesolve@foxmail.com">onesolve@foxmail.com</a></p>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="foot-brand">
+    <a class="brand" href="./index.html">
+      <span class="brand-mark" aria-hidden="true">DJ</span>
+      <span class="brand-name">Decision Journal<span>OneSolve Studio</span></span>
+    </a>
+    <p class="i18n-en">One app, one problem. Local-first iOS apps with no ads, no accounts and no tracking.</p>
+    <p class="i18n-zh">一个 App 解决一个问题。本机优先的 iOS 应用，无广告、无账号、无追踪。</p>
+    <p class="i18n-en">Support: <a href="mailto:onesolve@foxmail.com">onesolve@foxmail.com</a></p>
+    <p class="i18n-zh">支持邮箱：<a href="mailto:onesolve@foxmail.com">onesolve@foxmail.com</a></p>
+  </div>
+  <nav aria-label="Product">
+    <h2 class="foot-title i18n-en">Product</h2>
+    <h2 class="foot-title i18n-zh">产品</h2>
+    <ul>
+      <li><a href="./index.html">Decision Journal</a></li>
+      <li><a href="./privacy.html">Privacy</a></li>
+      <li><a href="./terms.html">Terms</a></li>
+      <li><a href="./support.html">Support</a></li>
+    </ul>
+  </nav>
+  <nav aria-label="Company">
+    <h2 class="foot-title i18n-en">Company</h2>
+    <h2 class="foot-title i18n-zh">公司</h2>
+    <ul>
+      <li><a href="mailto:onesolve@foxmail.com">Contact</a></li>
+      <li><a href="./support.html#contact">Help &amp; FAQ</a></li>
+      <li><a href="./privacy.html">Privacy policy</a></li>
+      <li><a href="./terms.html">Terms of use</a></li>
+    </ul>
+  </nav>
+  <div class="foot-meta">
+    <p class="i18n-en"><strong>Operator:</strong> OneSolve Studio, operated by Xinhua Zhang (individual developer) · [Registered business address]</p>
+    <p class="i18n-zh"><strong>运营主体：</strong>OneSolve Studio，由独立开发者 Xinhua Zhang 运营 · [注册地址]</p>
+    <p class="i18n-en"><strong>Effective:</strong> 2026-11-06 · <strong>Last updated:</strong> 2026-11-08</p>
+    <p class="i18n-zh"><strong>生效日期：</strong>2026-11-06 · <strong>最后更新：</strong>2026-11-08</p>
+    <p class="foot-copy">© 2026 OneSolve Studio. All product names and screenshots are the property of OneSolve Studio.</p>
+  </div>
+</footer>
+
 <script>
 (function () {
-  var KEY = 'onesolve_lang';
+  var KEY = 'dj-lang';
   function setLang(lang) {
-    document.documentElement.setAttribute('data‑lang', lang);
-    document.documentElement.lang = lang === 'zh' ? 'zh‑CN' : 'en';
-    var b = document.body;
-    document.title = lang === 'zh' ? (b.dataset.titleZh || document.title) : (b.dataset.titleEn || document.title);
-    var btns = document.querySelectorAll('.lang button');
-    for (var i = 0; i < btns.length; i++) {
-      btns[i].setAttribute('aria‑pressed', btns[i].dataset.lang === lang ? 'true' : 'false');
-    }
+    document.documentElement.setAttribute('data-lang', lang);
+    document.documentElement.lang = lang === 'zh' ? 'zh-Hans' : 'en';
     try { localStorage.setItem(KEY, lang); } catch (e) {}
-  }
-  function init() {
-    var saved = null;
-    try { saved = localStorage.getItem(KEY); } catch (e) {}
-    if (!saved) { saved = ((navigator.language || '').toLowerCase().indexOf('zh') === 0) ? 'zh' : 'en'; }
-    setLang(saved);
-    var btns = document.querySelectorAll('.lang button');
-    for (var i = 0; i < btns.length; i++) {
-      btns[i].addEventListener('click', function () { setLang(this.dataset.lang); });
+    var btns = document.querySelectorAll('.lang-switch button');
+    for (var i = 0; i < btns.length; i += 1) {
+      btns[i].setAttribute('aria-pressed', btns[i].getAttribute('data-lang') === lang ? 'true' : 'false');
     }
   }
-  if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', init); } else { init(); }
+  var saved = 'en';
+  try { saved = localStorage.getItem(KEY) || 'en'; } catch (e) {}
+  setLang(saved === 'zh' ? 'zh' : 'en');
+  var btns = document.querySelectorAll('.lang-switch button');
+  for (var j = 0; j < btns.length; j += 1) {
+    btns[j].addEventListener('click', function () {
+      setLang(this.getAttribute('data-lang'));
+    });
+  }
 })();
 </script>
 </body>
 </html>
-<!-- （注：内容由AI生成） -->

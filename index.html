@@ -1,259 +1,207 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Cogvra（我有数）— Calibrate your judgement</title>
-<meta name="description" content="Cogvra（我有数）— 校准你的判断力。本地优先决策复盘工具，记录选择、信心预期，事后核验结果。">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2300A898' /><g stroke='%23FFFFFF' stroke-width='6' fill='none' stroke-linecap='round'><line x1='20' y1='50' x2='42' y2='50' /><line x1='46' y1='42' x2='46' y2='58' /><line x1='52' y1='42' x2='52' y2='58' /><line x1='58' y1='42' x2='58' y2='58' /><circle cx='72' cy='50' r='16'/></g></svg>">
-<style>
-:root{
-  --bg:#FFFFFF; --primary:#00A898; --primary-dark:#006B5A;
-  --text:#333333; --muted:#777777; --line:#EEEEEE; --soft:#F2FAF9;
-}
-html[data-lang="en"] .zh{display:none !important;}
-html[data-lang="zh"] .en{display:none !important;}
-*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;}
-body{
-  background-color:var(--bg); color:var(--text);
-  padding:0 0 calc(48px + env(safe-area-inset-bottom));
-  max-width:1100px; margin:0 auto;
-}
-nav{
-  display:flex; align-items:center; justify-content:space-between;
-  padding:16px 20px; border-bottom:1px solid var(--line); margin-bottom:24px;
-}
-.brand{display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--primary-dark); font-weight:700; font-size:20px;}
-.brand svg{width:36px; height:36px;}
-.lang{display:flex; gap:8px;}
-.lang button{
-  font:inherit; font-size:13px; padding:6px 12px; border-radius:8px; cursor:pointer;
-  background:transparent; color:var(--primary); border:1px solid var(--primary); transition:.18s;
-}
-html[data-lang="en"] .lang button[data-lang="en"],
-html[data-lang="zh"] .lang button[data-lang="zh"]{ background:var(--primary); color:#fff; }
-.header{text-align:center; margin-bottom:56px; padding:0 20px;}
-.header .mark{width:120px; height:120px; margin:0 auto 20px; display:block;}
-.header h1{font-size:32px; margin-bottom:16px; color:var(--primary-dark); letter-spacing:.5px;}
-.header .tagline{font-size:20px; line-height:1.5; margin-bottom:10px;}
-.header p{max-width:700px; margin:0 auto; font-size:17px; line-height:1.65; opacity:.85;}
-.meta{margin-top:22px; display:flex; gap:10px; justify-content:center; flex-wrap:wrap; font-size:13px; color:var(--muted);}
-.meta span{padding:4px 10px; border:1px solid var(--line); border-radius:999px;}
-.container{display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:24px; padding:0 20px;}
-.card{border:1px solid var(--line); border-radius:16px; padding:26px 24px; display:flex; flex-direction:column; align-items:center; text-align:center; background:#fff; transition:.2s;}
-.card:hover{box-shadow:0 4px 16px rgba(0,168,152,.12);}
-.icon-wrap{width:72px; height:72px; margin-bottom:16px;}
-.card h2{font-size:19px; margin-bottom:8px;}
-.card .en-name{font-size:11px; letter-spacing:1.4px; font-weight:600; color:var(--muted); margin-bottom:10px; text-transform:uppercase;}
-.card p{font-size:14.5px; line-height:1.6; color:#555;}
-.card .rel{margin-top:14px; padding-top:12px; border-top:1px solid var(--line); font-size:13px; color:var(--muted); text-align:left; width:100%;}
-.card .rel strong{color:var(--primary);}
-.section-title{text-align:center; margin:56px 0 26px; padding:0 20px;}
-.section-title h2{font-size:24px; color:var(--primary-dark); margin-bottom:8px;}
-.section-title p{font-size:14.5px; color:var(--muted);}
-.pricing{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:24px; padding:0 20px; max-width:960px; margin:0 auto;}
-.price-card{border:1px solid var(--line); border-radius:16px; padding:30px 24px; text-align:center; background:#fff;}
-.price-card.hi{border:2px solid var(--primary); position:relative;}
-.badge{position:absolute; top:-12px; left:50%; transform:translateX(-50%); background:var(--primary); color:#fff; font-size:12px; font-weight:600; padding:4px 12px; border-radius:999px;}
-.price-card .title{font-size:18px; font-weight:600; margin-bottom:10px;}
-.price-card .price{font-size:32px; font-weight:700; color:var(--text); margin-bottom:16px;}
-.price-card .price span{font-size:14px; font-weight:400; color:var(--muted);}
-.price-card ul{list-style:none; text-align:left; font-size:14px; color:#555; margin-bottom:24px; line-height:1.8; padding-left:20px;}
-.price-card ul li::before{content:"✓"; color:var(--primary); font-weight:bold; display:inline-block; width:20px; margin-left:-20px;}
-.btn{display:block; width:100%; padding:12px; border-radius:12px; border:0; background:var(--soft); color:var(--primary); font-weight:600; cursor:pointer; font-size:15px;}
-.btn.primary{background:var(--primary); color:#fff;}
-.download{margin-top:56px; padding:34px 20px; text-align:center; border-top:1px solid var(--line);}
-.download .note{font-size:13px; color:var(--muted); margin-top:10px;}
-footer{margin-top:44px; display:flex; flex-wrap:wrap; gap:8px 18px; justify-content:center; font-size:13px; color:var(--muted); padding:0 20px;}
-footer a{color:var(--muted); text-decoration:none;}
-footer a:hover{color:var(--primary);}
-footer .copy{flex:1 1 100%; text-align:center; margin-top:6px; opacity:.7;}
-@media (max-width:640px){
-  .header .mark{width:86px; height:86px; margin-bottom:14px;}
-  .header h1{font-size:26px;}
-  .container{grid-template-columns:1fr;}
-  .pricing{grid-template-columns:1fr;}
-}
-</style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Decision Journal — Think clearly. Decide calmly.</title>
+<meta name="description" content="A private, on-device decision journal with thinking models, patterns, and your own principles. No account, no cloud, no analytics." />
+<link rel="stylesheet" href="./assets/site.css" />
+<!--
+  PLACEHOLDERS TO REPLACE BEFORE SUBMISSION
+  1. [Registered business address] — registered/contact address used in the footer of all four pages.
+  2. Confirm the operator line matches the Apple developer account:
+     "OneSolve Studio, operated by Xinhua Zhang (individual developer)".
+  3. Contact email is shared with the other OneSolve apps: onesolve@foxmail.com.
+  Search for "[" in this folder to find every placeholder in one pass.
+-->
 </head>
-<body data-title-en="Cogvra — Calibrate your judgement" data-title-zh="Cogvra（我有数）— 校准你的判断力">
-<nav>
-  <a href="#" class="brand">
-    <svg viewBox="0 0 100 100">
-      <rect width="100" height="100" rx="20" fill="#00A898" />
-      <g stroke='#F7F7F5' stroke-width='6' fill='none' stroke-linecap='round'>
-        <line x1='20' y1='50' x2='42' y2='50' />
-        <line x1='46' y1='42' x2='46' y2='58' />
-        <line x1='52' y1='42' x2='52' y2='58' />
-        <line x1='58' y1='42' x2='58' y2='58' />
-        <circle cx='72' cy='50' r='16'/>
-      </g>
-    </svg>
-    <span>Cogvra</span>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <a class="brand" href="./index.html" aria-label="Decision Journal home">
+    <span class="brand-mark" aria-hidden="true">DJ</span>
+    <span class="brand-name">Decision Journal<span>OneSolve Studio</span></span>
   </a>
-  <div class="lang">
-    <button type="button" data-lang="en" aria-pressed="true">EN</button>
-    <button type="button" data-lang="zh" aria-pressed="false">中文</button>
-  </div>
-</nav>
-<header class="header">
-  <h1><span class="zh">Cogvra（我有数）</span><span class="en">Cogvra</span></h1>
-  <p class="tagline en">Calibrate your own judgement.</p>
-  <p class="tagline zh">校准你的判断力。</p>
-  <p class="en">A local‑first decision journal. Record your choices, confidence and expectations. Come back later to fill real outcomes and see how well you actually predict things.</p>
-  <p class="zh">一款本地优先的决策复盘工具。记录你的选择、信心值与预期结果。事后回填真实结局，看清自己真实的判断水平。</p>
-  <div class="meta">
-    <span class="en">No account</span><span class="zh">无账号</span>
-    <span class="en">No ads</span><span class="zh">无广告</span>
-    <span class="en">Data stays on your device</span><span class="zh">数据留在本机</span>
+  <nav class="site-nav" aria-label="Primary">
+    <a href="./index.html" aria-current="page">Decision Journal</a>
+    <a href="./privacy.html">Privacy</a>
+    <a href="./terms.html">Terms</a>
+    <a href="./support.html">Support</a>
+  </nav>
+  <div class="lang-switch" role="group" aria-label="Language">
+    <button type="button" data-lang="en">EN</button>
+    <button type="button" data-lang="zh">中文</button>
   </div>
 </header>
 
-<div class="section-title">
-  <h2 class="en">Three steps for better judgement</h2>
-  <h2 class="zh">提升判断力的三步</h2>
-  <p class="en">Capture the moment of choice, wait for reality, then review.</p>
-  <p class="zh">定格做选择的瞬间，等待事实落地，再来复盘校验。</p>
-</div>
-<div class="container">
-  <article class="card">
-    <span class="en-name">Record</span>
-    <h2 class="en">Log your decision</h2>
-    <h2 class="zh">记录决策</h2>
-    <p class="en">Write down alternatives, pros‑cons, confidence percentage and your expectation before you know the result.</p>
-    <p class="zh">在结果到来之前，写下备选方案、利弊、信心百分比与你的预期。</p>
-    <div class="rel"><span class="en">What you <strong>thought</strong> at that time</span><span class="zh">留存你<strong>当时</strong>真实想法</span></div>
-  </article>
-  <article class="card">
-    <span class="en-name">Remind</span>
-    <h2 class="en">Set review reminder</h2>
-    <h2 class="zh">设置回访提醒</h2>
-    <p class="en">Pick a future date to revisit this entry. The app will nudge you when it’s time to fill real‑world outcome.</p>
-    <p class="zh">选定未来回访日期，到点提醒你回填现实结局。</p>
-    <div class="rel"><span class="en">Time lets <strong>reality</strong> unfold</span><span class="zh">交给时间等待<strong>事实</strong>揭晓</span></div>
-  </article>
-  <article class="card">
-    <span class="en-name">Calibrate</span>
-    <h2 class="en">Review & statistics</h2>
-    <h2 class="zh">复盘与统计</h2>
-    <p class="en">Compare expectation vs real result. See your calibration statistics: when you are over‑optimistic or too cautious.</p>
-    <p class="zh">对比预期与真实结果，查看判断校准统计，识别自己什么时候过度乐观、什么时候过于保守。</p>
-    <div class="rel"><span class="en">Learn from your <strong>past choices</strong></span><span class="zh">从<strong>过往选择</strong>中学习</span></div>
-  </article>
-</div>
+<main id="main">
+  <section class="hero page-hero" aria-labelledby="hero-title">
+    <p class="eyebrow">Decision Journal</p>
+    <h1 id="hero-title" class="i18n-en">Think clearly.<br />Decide calmly.</h1>
+    <h1 class="i18n-zh">想清楚，再决定。</h1>
+    <p class="lede i18n-en">A private, on-device journal for the decisions that matter. Use thinking models, see the patterns behind what happened, and write down the principles you want to keep.</p>
+    <p class="lede i18n-zh">一个只保存在本机的决策思考日记。用思维模型拆解问题，看懂事情背后的规律，并写下你想守住的准则。</p>
+    <p class="sub i18n-en">Built for iPhone. English and Simplified Chinese. No account, no cloud, no tracking.</p>
+    <p class="sub i18n-zh">为 iPhone 打造，提供英文与简体中文。无账号、无云端、无追踪。</p>
+    <div class="cta-row">
+      <a class="btn btn-primary i18n-en" href="./support.html">Support</a>
+      <a class="btn btn-ghost i18n-en" href="./privacy.html">Privacy policy</a>
+      <a class="btn btn-primary i18n-zh" href="./support.html">获取支持</a>
+      <a class="btn btn-ghost i18n-zh" href="./privacy.html">隐私政策</a>
+    </div>
+    <p class="fineprint i18n-en">Coming to the App Store. This site hosts the legal and support pages only.</p>
+    <p class="fineprint i18n-zh">即将上架 App Store。本站仅承载法律与支持页面。</p>
+  </section>
 
-<div class="section-title">
-  <h2 class="en">What makes it different</h2>
-  <h2 class="zh">产品特色</h2>
-</div>
-<div class="container">
-  <article class="card">
-    <h2 class="en">Local‑first & privacy‑oriented</h2>
-    <h2 class="zh">本地优先，隐私优先</h2>
-    <p class="en">All decision entries, notes and statistics live on‑device. No account required. Nothing is sent to our servers.</p>
-    <p class="zh">全部决策条目、笔记、统计都保存在本机，无需注册账号，不会上传至开发者服务器。</p>
-  </article>
-  <article class="card">
-    <h2 class="en">Export & backup</h2>
-    <h2 class="zh">导出与备份</h2>
-    <p class="en">Export full dataset as CSV for external analysis. Optional iCloud‑Drive timestamped backups you control.</p>
-    <p class="zh">完整导出CSV用于外部分析；可选iCloud云盘时间戳备份，完全由你掌控。</p>
-  </article>
-  <article class="card">
-    <h2 class="en">App lock with biometrics / passcode</h2>
-    <h2 class="zh">密码/生物识别应用锁</h2>
-    <p class="en">Protect your private decision records with passcode or biometric authentication.</p>
-    <p class="zh">使用密码或生物识别保护你的私密决策记录。</p>
-  </article>
-</div>
+  <section class="section" aria-labelledby="inside-title">
+    <h2 id="inside-title" class="i18n-en">What's inside</h2>
+    <h2 class="i18n-zh">里面有什么</h2>
+    <div class="card-grid">
+      <article class="card">
+        <h3 class="i18n-en">Thinking models</h3>
+        <h3 class="i18n-zh">思维模型</h3>
+        <p class="i18n-en">16 frameworks for breaking a decision down — opportunity cost, sunk cost, second-order effects, inversion, Bayesian updating, and more.</p>
+        <p class="i18n-zh">16 个拆解决策的思考框架：机会成本、沉没成本、二阶效应、逆向思考、贝叶斯更新等。</p>
+      </article>
+      <article class="card">
+        <h3 class="i18n-en">Patterns</h3>
+        <h3 class="i18n-zh">透视模型</h3>
+        <p class="i18n-en">160 explanations of why things happen — conclusions and patterns, not another list of questions to ask.</p>
+        <p class="i18n-zh">160 条解释“为什么会这样”的规律与结论，而不是又一套提问清单。</p>
+      </article>
+      <article class="card">
+        <h3 class="i18n-en">Your principles</h3>
+        <h3 class="i18n-zh">价值锚点</h3>
+        <p class="i18n-en">64 example principles you can edit, plus your own. Write the lines you do not cross before a decision gets expensive.</p>
+        <p class="i18n-zh">64 条可编辑的示例准则，以及完全属于你自己的准则。在代价变大之前，先写下你不越过的线。</p>
+      </article>
+      <article class="card">
+        <h3 class="i18n-en">History, reframed</h3>
+        <h3 class="i18n-zh">历史样本</h3>
+        <p class="i18n-en">76 real decisions, including the ones that went badly, tagged to the models they illustrate.</p>
+        <p class="i18n-zh">76 个真实决策样本，包括那些失败的，并标注它们对应的思维模型。</p>
+      </article>
+    </div>
+  </section>
 
-<div class="section-title" style="margin-top:80px;">
-  <h2 class="en">Pricing</h2>
-  <h2 class="zh">定价方案</h2>
-  <p class="en">Monthly / Yearly include 7‑day free trial. Lifetime one‑time purchase with no trial.</p>
-  <p class="zh">月付、年付支持7天免费试用；终身买断为一次性付费，不含试用。</p>
-</div>
-<div class="pricing">
-  <div class="price-card">
-    <div class="title"><span class="en">Monthly</span><span class="zh">月付</span></div>
-    <div class="price">$3.99<span>/mo</span></div>
-    <ul>
-      <li><span class="en">Unlimited decision entries</span><span class="zh">无限决策条目</span></li>
-      <li><span class="en">Review reminders</span><span class="zh">回访提醒</span></li>
-      <li><span class="en">Calibration statistics</span><span class="zh">判断力校准统计</span></li>
-      <li><span class="en">CSV export</span><span class="zh">CSV导出备份</span></li>
-      <li><span class="en">iCloud‑Drive backup</span><span class="zh">iCloud云盘备份</span></li>
-      <li><span class="en">App biometric lock</span><span class="zh">生物识别应用锁</span></li>
-      <li><strong><span class="en">7‑day free trial</span><span class="zh">7天免费试用</span></strong></li>
+  <section class="section" aria-labelledby="how-title">
+    <h2 id="how-title" class="i18n-en">How it works</h2>
+    <h2 class="i18n-zh">怎么用</h2>
+    <ol class="checklist i18n-en">
+      <li>Describe the decision you are facing.</li>
+      <li>Pick the models and principles that apply.</li>
+      <li>Write your reasoning, the trade-offs, and what would change your mind.</li>
+      <li>Come back later and record what actually happened.</li>
+    </ol>
+    <ol class="checklist i18n-zh">
+      <li>写下你正在面对的决定。</li>
+      <li>挑出适用的思维模型与准则。</li>
+      <li>记录你的推理、权衡，以及什么会改变你的想法。</li>
+      <li>过一段时间回来，补记实际发生了什么。</li>
+    </ol>
+  </section>
+
+  <section class="section" aria-labelledby="privacy-title">
+    <h2 id="privacy-title" class="i18n-en">Private by design</h2>
+    <h2 class="i18n-zh">隐私优先</h2>
+    <ul class="checklist i18n-en">
+      <li><strong>No account.</strong> Open the app and start writing.</li>
+      <li><strong>Your writing never leaves the device.</strong> Only purchase and entitlement checks go to Apple and RevenueCat.</li>
+      <li><strong>No analytics, crash reporting, ads, tracking, or third-party SDKs beyond RevenueCat for purchases.</strong></li>
+      <li><strong>Encrypted on device.</strong> Your journal is encrypted with a key held in the iOS Keychain.</li>
+      <li><strong>Yours to leave with.</strong> Export or delete your data whenever you want; uninstalling removes the local vault.</li>
     </ul>
-    <button class="btn primary"><span class="en">Start Free Trial</span><span class="zh">开始免费试用</span></button>
-  </div>
-  <div class="price-card hi">
-    <div class="badge"><span class="en">Best Value</span><span class="zh">最划算</span></div>
-    <div class="title"><span class="en">Yearly</span><span class="zh">年付</span></div>
-    <div class="price">$19.99<span>/yr</span></div>
-    <ul>
-      <li><span class="en">All premium features</span><span class="zh">全部高级功能</span></li>
-      <li><span class="en">Unlimited decision entries</span><span class="zh">无限决策条目</span></li>
-      <li><span class="en">Review reminders & statistics</span><span class="zh">回访提醒与统计分析</span></li>
-      <li><span class="en">CSV export & iCloud backup</span><span class="zh">CSV导出、iCloud备份</span></li>
-      <li><span class="en">App lock</span><span class="zh">应用锁保护</span></li>
-      <li><strong><span class="en">7‑day free trial</span><span class="zh">7天免费试用</span></strong></li>
+    <ul class="checklist i18n-zh">
+      <li><strong>无账号。</strong>打开就能写。</li>
+      <li><strong>你写的内容不离开设备。</strong>只有购买与权益校验会与 Apple、RevenueCat 通信。</li>
+      <li><strong>无统计、无崩溃上报、无广告、不追踪；除内购校验用的 RevenueCat 外，无其他第三方 SDK。</strong></li>
+      <li><strong>本机加密。</strong>日记加密保存，密钥存放在 iOS Keychain。</li>
+      <li><strong>随时可带走。</strong>你可以自行导出或删除数据；卸载 App 即清除本地加密库。</li>
     </ul>
-    <button class="btn primary"><span class="en">Start Free Trial</span><span class="zh">开始免费试用</span></button>
+    <p class="i18n-en"><a href="./privacy.html">Read the full privacy policy</a></p>
+    <p class="i18n-zh"><a href="./privacy.html">阅读完整隐私政策</a></p>
+  </section>
+
+  <section class="section" aria-labelledby="pro-title">
+    <h2 id="pro-title" class="i18n-en">Pro, if you want it</h2>
+    <h2 class="i18n-zh">关于 Pro</h2>
+    <p class="i18n-en">The journal and the built-in library are usable without paying. Pro is an optional way to support an independent, local-first app and future library updates. Monthly and yearly plans renew automatically; a one-time lifetime purchase is also available. Payment is processed by Apple, and your entitlement is verified with RevenueCat; prices are shown in the App Store.</p>
+    <p class="i18n-zh">日记与内置内容库无需付费即可使用。Pro 是可选的支持方式，用于支持这个独立、本机优先的产品与后续内容更新。月付与年付会自动续期，也提供一次性买断。付款由 Apple 处理，权益由 RevenueCat 校验；价格以 App Store 显示为准。</p>
+    <p class="i18n-en"><a href="./terms.html">Subscription terms</a> · <a href="./support.html">Restore or cancel a purchase</a></p>
+    <p class="i18n-zh"><a href="./terms.html">订阅条款</a> · <a href="./support.html">恢复或取消购买</a></p>
+  </section>
+
+  <section class="section" aria-labelledby="notice-title">
+    <h2 id="notice-title" class="i18n-en">A thinking tool, not advice</h2>
+    <h2 class="i18n-zh">是思考工具，不是建议</h2>
+    <p class="i18n-en">Decision Journal provides frameworks and references for your own thinking. It does not give decision advice and is not medical, psychological, legal, or financial advice. For those decisions, consult a qualified professional.</p>
+    <p class="i18n-zh">Decision Journal 只提供思考框架与参考，不构成决策建议，也不构成医疗、心理、法律或财务建议。涉及这些领域时，请咨询具备资质的专业人士。</p>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="foot-brand">
+    <a class="brand" href="./index.html">
+      <span class="brand-mark" aria-hidden="true">DJ</span>
+      <span class="brand-name">Decision Journal<span>OneSolve Studio</span></span>
+    </a>
+    <p class="i18n-en">One app, one problem. Local-first iOS apps with no ads, no accounts and no tracking.</p>
+    <p class="i18n-zh">一个 App 解决一个问题。本机优先的 iOS 应用，无广告、无账号、无追踪。</p>
+    <p class="i18n-en">Support: <a href="mailto:onesolve@foxmail.com">onesolve@foxmail.com</a></p>
+    <p class="i18n-zh">支持邮箱：<a href="mailto:onesolve@foxmail.com">onesolve@foxmail.com</a></p>
   </div>
-  <div class="price-card">
-    <div class="title"><span class="en">Lifetime</span><span class="zh">终身买断</span></div>
-    <div class="price">$49.99<span>/once</span></div>
+  <nav aria-label="Product">
+    <h2 class="foot-title i18n-en">Product</h2>
+    <h2 class="foot-title i18n-zh">产品</h2>
     <ul>
-      <li><span class="en">All premium features forever</span><span class="zh">永久解锁全部高级功能</span></li>
-      <li><span class="en">Unlimited decision entries</span><span class="zh">无限决策条目</span></li>
-      <li><span class="en">Reminders, statistics, export</span><span class="zh">提醒、统计、导出全部可用</span></li>
-      <li><span class="en">iCloud‑Drive backup & app lock</span><span class="zh">iCloud备份与应用锁</span></li>
-      <li><strong><span class="en">One‑time payment, no subscription, no trial</span><span class="zh">一次性付费，无订阅，不含试用</span></strong></li>
+      <li><a href="./index.html">Decision Journal</a></li>
+      <li><a href="./privacy.html">Privacy</a></li>
+      <li><a href="./terms.html">Terms</a></li>
+      <li><a href="./support.html">Support</a></li>
     </ul>
-    <button class="btn"><span class="en">Buy Once</span><span class="zh">一次买断</span></button>
+  </nav>
+  <nav aria-label="Company">
+    <h2 class="foot-title i18n-en">Company</h2>
+    <h2 class="foot-title i18n-zh">公司</h2>
+    <ul>
+      <li><a href="mailto:onesolve@foxmail.com">Contact</a></li>
+      <li><a href="./support.html#contact">Help &amp; FAQ</a></li>
+      <li><a href="./privacy.html">Privacy policy</a></li>
+      <li><a href="./terms.html">Terms of use</a></li>
+    </ul>
+  </nav>
+  <div class="foot-meta">
+    <p class="i18n-en"><strong>Operator:</strong> OneSolve Studio, operated by Xinhua Zhang (individual developer) · [Registered business address]</p>
+    <p class="i18n-zh"><strong>运营主体：</strong>OneSolve Studio，由独立开发者 Xinhua Zhang 运营 · [注册地址]</p>
+    <p class="i18n-en"><strong>Effective:</strong> 2026-11-06 · <strong>Last updated:</strong> 2026-11-08</p>
+    <p class="i18n-zh"><strong>生效日期：</strong>2026-11-06 · <strong>最后更新：</strong>2026-11-08</p>
+    <p class="foot-copy">© 2026 OneSolve Studio. All product names and screenshots are the property of OneSolve Studio.</p>
   </div>
-</div>
-
-<div class="download">
-  <span class="btn primary en" style="display:inline-block; width:auto; padding:12px 32px;">Coming soon on the App Store</span>
-  <span class="btn primary zh" style="display:inline-block; width:auto; padding:12px 32px;">即将上架 App Store</span>
-  <p class="note en">Restore purchases via same Apple‑ID on new devices.</p>
-  <p class="note zh">更换设备使用同一Apple ID恢复购买。</p>
-</div>
-
-<footer>
-  <a href="privacy.html" class="en">Privacy Policy</a><a href="privacy.html" class="zh">隐私政策</a>
-  <a href="terms.html" class="en">Terms of Service</a><a href="terms.html" class="zh">使用条款</a>
-  <a href="support.html" class="en">Support</a><a href="support.html" class="zh">支持</a>
-  <span class="copy en">© 2026 OneSolve</span>
-  <span class="copy zh">© 2026 OneSolve</span>
 </footer>
 
 <script>
 (function () {
-  var KEY = 'onesolve_lang';
+  var KEY = 'dj-lang';
   function setLang(lang) {
     document.documentElement.setAttribute('data-lang', lang);
-    document.documentElement.lang = lang === 'zh' ? 'zh‑CN' : 'en';
-    var b = document.body;
-    document.title = lang === 'zh' ? (b.dataset.titleZh || document.title) : (b.dataset.titleEn || document.title);
-    var btns = document.querySelectorAll('.lang button');
-    for (var i = 0; i < btns.length; i++) { btns[i].setAttribute('aria‑pressed', btns[i].dataset.lang === lang ? 'true' : 'false'); }
+    document.documentElement.lang = lang === 'zh' ? 'zh-Hans' : 'en';
     try { localStorage.setItem(KEY, lang); } catch (e) {}
+    var btns = document.querySelectorAll('.lang-switch button');
+    for (var i = 0; i < btns.length; i += 1) {
+      btns[i].setAttribute('aria-pressed', btns[i].getAttribute('data-lang') === lang ? 'true' : 'false');
+    }
   }
-  function init() {
-    var saved = null;
-    try { saved = localStorage.getItem(KEY); } catch (e) {}
-    if (!saved) { saved = ((navigator.language || '').toLowerCase().indexOf('zh') === 0) ? 'zh' : 'en'; }
-    setLang(saved);
-    var btns = document.querySelectorAll('.lang button');
-    for (var i = 0; i < btns.length; i++) { btns[i].addEventListener('click', function () { setLang(this.dataset.lang); }); }
+  var saved = 'en';
+  try { saved = localStorage.getItem(KEY) || 'en'; } catch (e) {}
+  setLang(saved === 'zh' ? 'zh' : 'en');
+  var btns = document.querySelectorAll('.lang-switch button');
+  for (var j = 0; j < btns.length; j += 1) {
+    btns[j].addEventListener('click', function () {
+      setLang(this.getAttribute('data-lang'));
+    });
   }
-  if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', init); } else { init(); }
 })();
 </script>
 </body>
 </html>
-<!-- （注：内容由AI生成） -->

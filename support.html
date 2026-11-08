@@ -1,84 +1,209 @@
-<!DOCTYPE html>
-<html lang="en" data‑lang="en">
+<!doctype html>
+<html lang="en" data-lang="en">
 <head>
-<meta charset="UTF‑8">
-<meta name="viewport" content="width=device‑width, initial‑scale=1.0, viewport‑fit=cover">
-<title>Support & Contact · Cogvra（我有数）</title>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2300A898' /><g stroke='%23FFFFFF' stroke‑width='6' fill='none' stroke‑linecap='round'><line x1='20' y1='50' x2='42' y2='50' /><line x1='46' y1='42' x2='46' y2='58' /><line x1='52' y1='42' x2='52' y2='58' /><line x1='58' y1='42' x2='58' y2='58' /><circle cx='72' cy='50' r='16'/></g></svg>">
-<style>
-:root{--bg:#FBFAF6;--card:#FFFFFF;--text:#1F1E1B;--sub:#6B7280;--border:#E8E6E0;--accent:#00A898;--soft:#E7F4F2;--accent‑text:#006B5A;}
-@media (prefers‑color‑scheme: dark){:root{--bg:#0F0F0E;--card:#1A1A18;--text:#F2F4F7;--sub:#9BA1AC;--border:#2A2A27;--accent:#3FB79F;--soft:#132220;--accent‑text:#6FD0BD;}}
-html[data‑lang="en"] .zh{display:none !important;} html[data‑lang="zh"] .en{display:none !important;}
-*{box‑sizing:border‑box;} html{-webkit‑text‑size‑adjust:100%;}
-body{margin:0;background:var(--bg);color:var(--text);line‑height:1.7;font‑family:‑apple‑system,BlinkMacSystemFont,"PingFang SC",Roboto,Arial,sans‑serif;-webkit‑font‑smoothing:antialiased;}
-.wrap{max‑width:760px;margin:0 auto;padding:18px 20px calc(56px + env(safe‑area‑inset‑bottom));}
-nav{display:flex;align‑items:center;justify‑content:space‑between;padding‑bottom:14px;border‑bottom:1px solid var(--border);margin‑bottom:20px;}
-.brand{display:flex;align‑items:center;gap:8px;font‑weight:700;font‑size:18px;color:var(--text);text‑decoration:none;}
-.brand svg{width:30px;height:30px;}
-.lang{display:flex;gap:6px;}
-.lang button{font:inherit;font‑size:12.5px;padding:5px 11px;border‑radius:9px;cursor:pointer;background:transparent;color:var(--accent‑text);border:1px solid var(--accent);transition:.18s;}
-html[data‑lang="en"] .lang button[data‑lang="en"],html[data‑lang="zh"] .lang button[data‑lang="zh"]{background:var(--accent);color:#fff;border‑color:var(--accent);}
-h1{font‑size:27px;margin:26px 0 4px;line‑height:1.35;}
-.updated{color:var(--sub);font‑size:13px;margin:0 0 22px;}
-h2{font‑size:18px;margin:30px 0 8px;}
-h3{font‑size:16px;margin:22px 0 4px;font‑weight:600;}
-p{margin:9px 0;font‑size:15px;}
-ul{margin:9px 0;padding‑left:20px;} li{margin:7px 0;font‑size:15px;} a{color:var(--accent‑text);}
-.banner{background:var(--soft);border:1px solid var(--border);border‑left:3px solid var(--accent);border‑radius:12px;padding:16px 18px;margin:4px 0 18px;}
-.banner h2{margin:0 0 6px;font‑size:16px;}
-.banner p{margin:4px 0;}
-footer{margin‑top:44px;padding‑top:18px;border‑top:1px solid var(--border);display:flex;flex‑wrap:wrap;gap:10px 14px;align‑items:center;font‑size:13px;color:var(--sub);}
-footer a{color:var(--sub);text‑decoration:none;} footer .copy{margin‑left:auto;}
-</style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Support — Decision Journal</title>
+<meta name="description" content="Help for Decision Journal: where your data is stored, backup and export, restoring a purchase, cancelling a subscription, deleting your data, and how to reach us." />
+<link rel="stylesheet" href="./assets/site.css" />
+<!--
+  PLACEHOLDERS TO REPLACE BEFORE SUBMISSION
+  1. [Registered business address] — registered/contact address used in the footer of all four pages.
+  2. Confirm the operator line matches the Apple developer account:
+     "OneSolve Studio, operated by Xinhua Zhang (individual developer)".
+  3. Contact email is shared with the other OneSolve apps: onesolve@foxmail.com.
+  Search for "[" in this folder to find every placeholder in one pass.
+-->
 </head>
-<body data‑title‑en="Support & Contact · Cogvra" data‑title‑zh="支持与联系 · Cogvra（我有数）">
-<div class="wrap">
-  <nav>
-    <a class="brand" href="index.html">
-      <svg viewBox="0 0 100 100"><rect width="100" height="100" rx="20" fill="#00A898" /><g stroke='#F7F7F5' stroke‑width='6' fill='none' stroke‑linecap='round'><line x1='20' y1='50' x2='42' y2='50' /><line x1='46' y1='42' x2='46' y2='58' /><line x1='52' y1='42' x2='52' y2='58' /><line x1='58' y1='42' x2='58' y2='58' /><circle cx='72' cy='50' r='16'/></g></svg>
-      <span>Cogvra</span>
-    </a>
-    <div class="lang">
-      <button type="button" data‑lang="en" aria‑pressed="true">EN</button>
-      <button type="button" data‑lang="zh" aria‑pressed="false">中文</button>
-    </div>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <a class="brand" href="./index.html" aria-label="Decision Journal home">
+    <span class="brand-mark" aria-hidden="true">DJ</span>
+    <span class="brand-name">Decision Journal<span>OneSolve Studio</span></span>
+  </a>
+  <nav class="site-nav" aria-label="Primary">
+    <a href="./index.html">Decision Journal</a>
+    <a href="./privacy.html">Privacy</a>
+    <a href="./terms.html">Terms</a>
+    <a href="./support.html" aria-current="page">Support</a>
   </nav>
-  <h1 class="en">Support & Contact</h1>
-  <h1 class="zh">支持与联系</h1>
-  <p class="updated en">We are a small focused personal project and carefully reply to every email.</p>
-  <p class="updated zh">我们是小而专注的个人项目，会认真回复每一封邮件。</p>
-  <div class="banner">
-    <h2 class="en">Need help? Write to us</h2>
-    <h2 class="zh">遇到问题？写信给我们</h2>
-    <p class="en">Email: <a href="mailto:onesolve@foxmail.com">onesolve@foxmail.com</a></p>
-    <p class="zh">邮箱：<a href="mailto:onesolve@foxmail.com">onesolve@foxmail.com</a></p>
-    <p class="en">Please include: iPhone model, iOS version, app version and steps you took when issue appears.</p>
-    <p class="zh">为便于排查，请附上：iPhone机型、iOS版本、应用版本，以及复现问题的操作步骤。</p>
+  <div class="lang-switch" role="group" aria-label="Language">
+    <button type="button" data-lang="en">EN</button>
+    <button type="button" data-lang="zh">中文</button>
   </div>
-  <h2 class="en">Frequently Asked Questions</h2>
-  <h2 class="zh">常见问题</h2>
+</header>
 
-  <h3 class="en">Q: Where my decision data stored? Can data get lost?</h3>
-  <h3 class="zh">Q：我的决策数据保存在哪里？会不会丢失？</h3>
-  <p class="en">All your decision‑journal data stays locally on device and never upload to developer server. Uninstalling app will erase local‑data completely. It’s strongly recommended to export CSV regularly or enable iCloud‑Drive backup feature.</p>
-  <p class="zh">全部决策数据保存在本机，不会上传开发者服务器。卸载应用会彻底删除本地全部数据；强烈建议定期导出CSV，或者开启iCloud云盘备份。</p>
+<main id="main">
+  <section class="hero page-hero" aria-labelledby="hero-title">
+    <p class="eyebrow">Decision Journal</p>
+    <h1 id="hero-title" class="i18n-en">Support</h1>
+    <h1 class="i18n-zh">支持</h1>
+    <p class="lede i18n-en">Help with your journal, your purchases, and your data.</p>
+    <p class="lede i18n-zh">关于日记内容、购买与数据的帮助。</p>
+    <p class="sub i18n-en">We answer in English and Simplified Chinese, usually within two business days.</p>
+    <p class="sub i18n-zh">我们提供英文与简体中文支持，通常在两个工作日内回复。</p>
+    <p class="fineprint i18n-en">Effective: 2026-11-06 · Last updated: 2026-11-08</p>
+    <p class="fineprint i18n-zh">生效日期：2026-11-06 · 最后更新：2026-11-08</p>
+  </section>
 
-  <h3 class="en">Q: How does iCloud‑Drive backup work?</h3>
-  <h3 class="zh">Q：iCloud云盘备份如何工作？</h3>
-  <p class="en">After you turn‑on inside App settings, App writes timestamped backup‑files into your own iCloud‑Drive. Each backup generates new separate file. You can view or delete these backup files inside iOS "Files" App, we cannot read them.</p>
-  <p class="zh">在设置内开启后，本应用向你的iCloud云盘写入带时间戳备份文件；每次备份生成独立新文件；你可以在iOS「文件」App查看、删除备份，开发者无法读取。</p>
+  <section class="section" id="contact" aria-labelledby="contact-title">
+    <div class="summary">
+      <h2 id="contact-title" class="i18n-en">Contact us</h2>
+      <h2 id="contact-title-zh" class="i18n-zh">联系我们</h2>
+      <p class="i18n-en"><strong>Email:</strong> <a href="mailto:onesolve@foxmail.com?subject=Decision%20Journal%20support">onesolve@foxmail.com</a></p>
+      <p class="i18n-zh"><strong>邮箱：</strong><a href="mailto:onesolve@foxmail.com?subject=Decision%20Journal%20support">onesolve@foxmail.com</a></p>
+      <p class="i18n-en">Include your iOS version and the app version shown in Settings. We never ask you to send your journal contents, and you should never need to.</p>
+      <p class="i18n-zh">请附上你的 iOS 版本，以及设置页显示的 App 版本。我们绝不会索取你的日记内容，你也不需要提供。</p>
+      <div class="cta-row">
+        <a class="btn btn-primary i18n-en" href="mailto:onesolve@foxmail.com?subject=Decision%20Journal%20support">Email support</a>
+        <a class="btn btn-primary i18n-zh" href="mailto:onesolve@foxmail.com?subject=Decision%20Journal%20support">发送邮件</a>
+        <a class="btn btn-ghost i18n-en" href="./privacy.html">Privacy policy</a>
+        <a class="btn btn-ghost i18n-zh" href="./privacy.html">隐私政策</a>
+      </div>
+    </div>
+  </section>
 
-  <h3 class="en">Q: How can I erase all my local data?</h3>
-  <h3 class="zh">Q：如何清除本机全部数据？</h3>
-  <p class="en">Open Settings → Data Security → "Delete all data" and confirm. This will wipe all decision entries, cancel pending review reminders, delete backup files created by App (both local sandbox and iCloud‑Drive), reset App to empty state. Your language, theme and purchased entitlement remain. This action cannot undo. You can also delete single entry inside App or uninstall application.</p>
-  <p class="zh">打开设置‑数据安全‑删除全部数据确认执行；清除全部决策条目，取消待执行回访提醒，删除应用生成本地与iCloud备份，重置应用；语言、主题、已购权益保留；操作不可撤销；也可以单条删除记录或直接卸载App。</p>
+  <section class="section" id="faq" aria-labelledby="faq-title">
+    <h2 id="faq-title" class="i18n-en">Frequently asked questions</h2>
+    <h2 id="faq-title-zh" class="i18n-zh">常见问题</h2>
 
-  <h3 class="en">Q: About 7‑day free‑trial & subscription cancellation</h3>
-  <h3 class="zh">Q：关于7天免费试用与订阅取消</h3>
-  <p class="en">7‑day free‑trial only applies to monthly / yearly subscriptions, lifetime purchase does not include trial. If you do not wish to be charged, please cancel subscription at least 24 hours before trial‑expire date. Manage or cancel subscription in iOS Settings → Your Apple‑ID → Subscriptions.</p>
-  <p class="zh">7天免费试用仅针对月付、年付订阅；终身买断不提供试用。如果你不想产生扣费，请务必在试用到期前至少24小时取消订阅。前往iOS设置 → 你的Apple ID → 订阅页面管理或取消。</p>
+    <div class="i18n-en">
+      <dl class="faq">
+        <dt>Where is my data stored?</dt>
+        <dd>Only on your device, in encrypted local storage. The encryption key is held in the iOS Keychain. The app has no server and no account. Apart from purchase and entitlement checks, it makes no network requests. If you use iCloud or iTunes device backups, your backup is controlled by Apple and by your own backup settings.</dd>
 
-  <h3 class="en">Q: Is my purchase valid after switching iPhone?</h3>
-  <h3 class="zh">Q：更换新iPhone，我的购买权益还在吗？</h3>
-  <p class="en">Yes. Log‑in same Apple‑ID, tap "Restore Purchases". Local decision‑data will NOT auto‑sync; import CSV backup or
-<!-- （注：内容由AI生成） -->
+        <dt>How do I export or back up my journal?</dt>
+        <dd>Open Settings → Backup &amp; Restore → Export backup. You get plain text that you can copy, save, or share. Once exported, the text is no longer encrypted, so store it somewhere you trust. Anyone who has that text can read it.</dd>
+
+        <dt>Can I restore a purchase on a new iPhone?</dt>
+        <dd>Yes. Sign in to the App Store with the same Apple ID, open the Pro screen, and tap Restore Purchases. Your purchase is tied to your Apple ID, not to the device. The app then checks your entitlement with RevenueCat using an anonymous App User ID and your purchase record; it never sees your payment details.</dd>
+
+        <dt>How do I cancel a subscription?</dt>
+        <dd>iOS Settings → your Apple ID → Subscriptions. Deleting the app does not cancel the subscription. Cancel at least 24 hours before the renewal date to avoid the next charge. There is no free trial; the plan starts charging when you confirm the purchase. You can also manage or cancel from the Pro screen’s “manage subscription” instructions.</dd>
+
+        <dt>How do I request a refund?</dt>
+        <dd>Refunds are handled by Apple, not by us. Use Apple’s report a problem page at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>, or contact Apple Support. We cannot issue or reverse a charge ourselves.</dd>
+
+        <dt>How do I delete everything?</dt>
+        <dd>Open Settings → Data &amp; Privacy → Delete all data, then confirm. This removes your local entries and any app-generated export files. It cannot be undone. Your purchase record stays with Apple. Uninstalling the app also removes the local vault and its key.</dd>
+
+        <dt>Does the app need an internet connection?</dt>
+        <dd>No. Writing, the built-in library, search, and export all work offline. Only a purchase, a restore, or an entitlement check needs a connection: Apple processes the payment and RevenueCat verifies your Pro entitlement.</dd>
+
+        <dt>Are the models and cases advice?</dt>
+        <dd>No. They are thinking frameworks and references. They do not account for your circumstances and are not medical, psychological, legal, or financial advice. For decisions in those areas, consult a qualified professional.</dd>
+
+        <dt>Why does part of the built-in library appear in Chinese?</dt>
+        <dd>Some historical samples were written in Chinese first and their English versions are still being added. English mode falls back to the original Chinese for those entries rather than showing a machine translation. Everything you write yourself is always shown exactly as you typed it.</dd>
+      </dl>
+    </div>
+
+    <div class="i18n-zh">
+      <dl class="faq">
+        <dt>我的数据存在哪里？</dt>
+        <dd>只存在你的设备上，采用本地加密存储，加密密钥存放在 iOS Keychain。App 没有服务器、没有账号；除购买与权益校验外，不发网络请求。如果你使用 iCloud 或 iTunes 的设备备份，该备份由 Apple 和你的备份设置决定。</dd>
+
+        <dt>如何导出或备份？</dt>
+        <dd>设置 → 备份与恢复 → 导出备份。你会得到一份可复制、保存或分享的纯文本。导出后的文本不再加密，请保存在你信任的地方；拿到这段文本的人都能读取内容。</dd>
+
+        <dt>换新 iPhone 后如何恢复购买？</dt>
+        <dd>可以。用同一 Apple ID 登录 App Store，打开 Pro 页面，点击“恢复购买”。购买绑定在你的 Apple ID 上，不绑定设备。App 随后会用 RevenueCat 校验权益，只使用匿名 App 用户 ID 与购买记录，不会看到你的支付信息。</dd>
+
+        <dt>如何取消订阅？</dt>
+        <dd>iOS 设置 → 你的 Apple ID → 订阅。仅删除 App 不会取消订阅。请在续期日前至少 24 小时取消，以免产生下一次扣费。本产品没有免费试用，确认购买后即开始计费。你也可以在 Pro 页面的订阅说明里查看管理与取消方式。</dd>
+
+        <dt>如何申请退款？</dt>
+        <dd>退款由 Apple 处理，不由我们处理。请使用 Apple 的“报告问题”页面 <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>，或联系 Apple 支持。我们无法自行发起或撤销扣款。</dd>
+
+        <dt>如何删除全部数据？</dt>
+        <dd>设置 → 数据与隐私 → 清空全部数据，然后确认。这会删除本地条目与 App 生成的导出文件，且不可撤销。购买记录仍保留在 Apple。卸载 App 也会清除本地加密库及其密钥。</dd>
+
+        <dt>App 需要联网吗？</dt>
+        <dd>不需要。写作、内置内容库、检索与导出都可离线使用。只有购买、恢复购买或权益校验需要联网：付款由 Apple 处理，Pro 权益由 RevenueCat 校验。</dd>
+
+        <dt>模型和案例是建议吗？</dt>
+        <dd>不是。它们只是思考框架与参考，不考虑你的具体处境，也不构成医疗、心理、法律或财务建议。涉及这些领域时，请咨询具备资质的专业人士。</dd>
+
+        <dt>为什么内置内容库有一部分是中文？</dt>
+        <dd>部分历史样本最初以中文写成，英文版本仍在补充。英文模式下这些条目会回退显示中文原文，而不是机器翻译。你自己写下的内容始终按原文显示。</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="feedback-title">
+    <h2 id="feedback-title" class="i18n-en">Bug reports and feature requests</h2>
+    <h2 id="feedback-title-zh" class="i18n-zh">问题反馈与功能建议</h2>
+    <p class="prose i18n-en">Email <a href="mailto:onesolve@foxmail.com?subject=Decision%20Journal%20bug">onesolve@foxmail.com</a> with “Bug” or “Feature” in the subject. Describe what you expected, what happened, and the steps that led to it; please include your iPhone model, iOS version, and app version. A screenshot helps. We read everything, even when we cannot reply to everything.</p>
+    <p class="prose i18n-zh">请发邮件至 <a href="mailto:onesolve@foxmail.com?subject=Decision%20Journal%20bug">onesolve@foxmail.com</a>，主题注明“Bug”或“Feature”。请说明你预期发生什么、实际发生了什么，以及复现步骤；并附上 iPhone 型号、iOS 版本与 App 版本。附截图更好。我们会阅读每一条反馈，即使无法逐条回复。</p>
+    <p class="fineprint i18n-en">Please do not send journal contents, screenshots of personal entries, or anything you would not want stored in an email inbox.</p>
+    <p class="fineprint i18n-zh">请不要发送日记内容、个人条目的截图，或任何你不希望留在邮箱里的东西。</p>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="foot-brand">
+    <a class="brand" href="./index.html">
+      <span class="brand-mark" aria-hidden="true">DJ</span>
+      <span class="brand-name">Decision Journal<span>OneSolve Studio</span></span>
+    </a>
+    <p class="i18n-en">One app, one problem. Local-first iOS apps with no ads, no accounts and no tracking.</p>
+    <p class="i18n-zh">一个 App 解决一个问题。本机优先的 iOS 应用，无广告、无账号、无追踪。</p>
+    <p class="i18n-en">Support: <a href="mailto:onesolve@foxmail.com">onesolve@foxmail.com</a></p>
+    <p class="i18n-zh">支持邮箱：<a href="mailto:onesolve@foxmail.com">onesolve@foxmail.com</a></p>
+  </div>
+  <nav aria-label="Product">
+    <h2 class="foot-title i18n-en">Product</h2>
+    <h2 class="foot-title i18n-zh">产品</h2>
+    <ul>
+      <li><a href="./index.html">Decision Journal</a></li>
+      <li><a href="./privacy.html">Privacy</a></li>
+      <li><a href="./terms.html">Terms</a></li>
+      <li><a href="./support.html">Support</a></li>
+    </ul>
+  </nav>
+  <nav aria-label="Company">
+    <h2 class="foot-title i18n-en">Company</h2>
+    <h2 class="foot-title i18n-zh">公司</h2>
+    <ul>
+      <li><a href="mailto:onesolve@foxmail.com">Contact</a></li>
+      <li><a href="./support.html#contact-title">Help &amp; FAQ</a></li>
+      <li><a href="./privacy.html">Privacy policy</a></li>
+      <li><a href="./terms.html">Terms of use</a></li>
+    </ul>
+  </nav>
+  <div class="foot-meta">
+    <p class="i18n-en"><strong>Operator:</strong> OneSolve Studio, operated by Xinhua Zhang (individual developer) · [Registered business address]</p>
+    <p class="i18n-zh"><strong>运营主体：</strong>OneSolve Studio，由独立开发者 Xinhua Zhang 运营 · [注册地址]</p>
+    <p class="i18n-en"><strong>Effective:</strong> 2026-11-06 · <strong>Last updated:</strong> 2026-11-08</p>
+    <p class="i18n-zh"><strong>生效日期：</strong>2026-11-06 · <strong>最后更新：</strong>2026-11-08</p>
+    <p class="foot-copy">© 2026 OneSolve Studio. All product names and screenshots are the property of OneSolve Studio.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var KEY = 'dj-lang';
+  function setLang(lang) {
+    document.documentElement.setAttribute('data-lang', lang);
+    document.documentElement.lang = lang === 'zh' ? 'zh-Hans' : 'en';
+    try { localStorage.setItem(KEY, lang); } catch (e) {}
+    var btns = document.querySelectorAll('.lang-switch button');
+    for (var i = 0; i < btns.length; i += 1) {
+      btns[i].setAttribute('aria-pressed', btns[i].getAttribute('data-lang') === lang ? 'true' : 'false');
+    }
+  }
+  var saved = 'en';
+  try { saved = localStorage.getItem(KEY) || 'en'; } catch (e) {}
+  setLang(saved === 'zh' ? 'zh' : 'en');
+  var btns = document.querySelectorAll('.lang-switch button');
+  for (var j = 0; j < btns.length; j += 1) {
+    btns[j].addEventListener('click', function () {
+      setLang(this.getAttribute('data-lang'));
+    });
+  }
+})();
+</script>
+</body>
+</html>
